@@ -1,0 +1,160 @@
+1
+00:00:02,360 --> 00:00:04,980
+Na ltima aula, adicionamos um mdulo compartilhado.
+
+2
+00:00:05,000 --> 00:00:09,790
+Vamos agora terminar todo esse mdulo dividindo nossas rotas.
+
+3
+00:00:09,800 --> 00:00:15,800
+Neste momento, recebemos este mdulo de roteamento de aplicativos e recebemos o componente de boas-vindas, bem como as rotas off
+
+4
+00:00:15,970 --> 00:00:17,310
+e a rota de negociao.
+
+5
+00:00:17,630 --> 00:00:23,630
+Agora, se voc pensar sobre isso, a rota de negociao no faz muito sentido aqui, porque
+
+6
+00:00:23,810 --> 00:00:30,620
+a rota de treinamento deve pertencer ao mdulo de treinamento e as rotas off devem pertencer ao mdulo off.
+
+7
+00:00:30,650 --> 00:00:34,020
+Ento isso  algo que eu tambm quero fazer agora.
+
+8
+00:00:34,280 --> 00:00:42,970
+Eu quero colocar essas rotas em seus mdulos para o mdulo all eu vou simplesmente cort-los.
+
+9
+00:00:42,980 --> 00:00:49,070
+V para a minha pasta e adicione todo o mdulo de roteamento da queda de Katia.
+
+10
+00:00:49,070 --> 00:00:54,620
+ considerado uma boa prtica sempre colocar rotas em um mdulo separado, chamado de file off
+
+11
+00:00:54,620 --> 00:00:59,420
+routing module, e isso se tornar um arquivo de roteamento carregado com muita avidez.
+
+12
+00:00:59,420 --> 00:01:10,900
+Ento, aqui estou eu Engy mdulo que ns, naturalmente, como voc sabe tem que importar em um ncleo singular e no mdulo Engy eu quero configurar minhas
+
+13
+00:01:10,900 --> 00:01:17,490
+rotas assim que eu vou adicionar minhas rotas constante que  do tipo rotas que
+
+14
+00:01:17,490 --> 00:01:19,160
+ importado de .
+
+15
+00:01:19,260 --> 00:01:25,950
+Roteador angular como este, que  uma matriz de rotas e eu apenas cortei as rotas para adicion-las aqui.
+
+16
+00:01:25,980 --> 00:01:29,150
+Esses dois objetos se inscrevem e fazem o login.
+
+17
+00:01:29,160 --> 00:01:30,670
+Precisamos import-los aqui.
+
+18
+00:01:30,900 --> 00:01:44,940
+Ento vamos adicionar importaes para se inscrever componente da pasta Sign-Up e uma importao para logar componente a partir
+
+19
+00:01:45,060 --> 00:01:49,650
+da pasta de login,  claro.
+
+20
+00:01:49,650 --> 00:01:56,100
+Agora ns temos o Roteador configurado e agora podemos ir para o mdulo ngi aqui e adicionar
+
+21
+00:01:56,100 --> 00:02:02,560
+importaes e importar o mdulo do roteador que est vindo do ngulo ou do pacote do roteador tambm.
+
+22
+00:02:02,830 --> 00:02:06,960
+Ento este mdulo e aqui ns no chamamos root.
+
+23
+00:02:06,990 --> 00:02:12,060
+Ns s chamamos isso de o que est em um aplicativo angular e esse no  o mdulo de roteamento.
+
+24
+00:02:12,060 --> 00:02:16,090
+Em vez disso, ns chamamos de filho e isso ir mescl-lo com um roteador.
+
+25
+00:02:16,140 --> 00:02:23,310
+Nos bastidores aqui passamos nossas rotas e depois temos que ter certeza de que exportamos este mdulo roteador.
+
+26
+00:02:23,490 --> 00:02:27,050
+E agora podemos import-lo para fora do Marchal.
+
+27
+00:02:27,240 --> 00:02:34,410
+Portanto, o aplicativo no o aplicativo para voc fora do mdulo de roteamento agora  importado aqui adicionado  matriz de
+
+28
+00:02:34,470 --> 00:02:41,620
+importaes e a declarao de importaes tambm  adicionada apontando para o arquivo de mdulo de roteamento desativado com isso.
+
+29
+00:02:41,630 --> 00:02:44,180
+Essas rotas ainda devem estar disponveis globalmente.
+
+30
+00:02:44,180 --> 00:02:50,330
+Portanto, em nosso aplicativo, embora no tenhamos mais essas rotas e o mdulo de roteamento de aplicativos,
+
+31
+00:02:50,330 --> 00:02:55,100
+tambm podemos remover as importaes do componente de inscrio e do componente de login.
+
+32
+00:02:55,100 --> 00:02:58,190
+Agora vamos compilar isso e ver se isso funciona.
+
+33
+00:02:58,430 --> 00:03:05,570
+Se o aplicativo carregar e eu sair, ainda poderemos alternar entre Inscrio e login mesmo que o
+
+34
+00:03:05,690 --> 00:03:07,550
+colocemos em um arquivo separado.
+
+35
+00:03:07,550 --> 00:03:10,760
+Agora vale a pena mencionar que isso  carregado ansiosamente.
+
+36
+00:03:10,790 --> 00:03:12,700
+Ento no estamos usando carregamento lento aqui.
+
+37
+00:03:12,770 --> 00:03:17,550
+Usamos para filho para adicionar essas rotas  configurao de rotas globais.
+
+38
+00:03:17,720 --> 00:03:22,880
+Mas estamos fazendo isso logo no incio do aplicativo porque a educao precisa estar
+
+39
+00:03:22,880 --> 00:03:24,300
+disponvel logo no incio.
+
+40
+00:03:24,500 --> 00:03:31,750
+Agora podemos tambm dar uma olhada no componente de treinamento e ver o que podemos fazer com isso.
+

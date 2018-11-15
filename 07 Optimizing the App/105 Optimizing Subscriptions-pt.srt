@@ -1,0 +1,164 @@
+1
+00:00:02,260 --> 00:00:08,350
+Ento, agora que tambm criamos o mdulo de treinamento, h duas coisas que reconheo que podemos otimizar para
+
+2
+00:00:08,350 --> 00:00:08,760
+um.
+
+3
+00:00:08,770 --> 00:00:15,220
+Devemos colocar o fogo angular marechal Gengler fogo de mdulos quero dizer no mdulo off e no
+
+4
+00:00:15,220 --> 00:00:17,220
+no mdulo app esqueci isso.
+
+5
+00:00:17,230 --> 00:00:22,980
+Ento, aqui vamos adicionar o mdulo angle of fire no array imports do mdulo off.
+
+6
+00:00:23,140 --> 00:00:25,400
+E isso significa que precisamos adicionar uma importao tambm.
+
+7
+00:00:25,420 --> 00:00:32,430
+Ento, precisamos importar o fogo angular do mdulo do ngulo de tiro para reduzir.
+
+8
+00:00:32,440 --> 00:00:39,820
+Isso agora nos permite voltar para o mdulo de aplicativo e fechar esta lacuna e tambm removeu a importao de ngulo de
+
+9
+00:00:39,820 --> 00:00:45,550
+fogo para fora do ngulo de fogo deve permanecer no marechal de ar porque Dadis o mdulo
+
+10
+00:00:45,550 --> 00:00:50,350
+que  usado para inicializar fogo LA e queremos fazer isso logo no comeo.
+
+11
+00:00:50,350 --> 00:00:51,900
+Mdulo da ndia.
+
+12
+00:00:52,240 --> 00:01:01,480
+E outra melhoria que eu reconheci  que voc pode obter um erro ou de nossas assinaturas, onde podemos cancelar a inscrio se
+
+13
+00:01:02,110 --> 00:01:04,730
+voc no as tiver por algum motivo.
+
+14
+00:01:04,750 --> 00:01:10,790
+Se Engy no stroy por algum motivo  chamado antes da assinatura ser criada, portanto, devemos
+
+15
+00:01:11,020 --> 00:01:16,700
+checar onde dizemos se o carregamento de ceps existe, ento eu quero cancelar a assinatura.
+
+16
+00:01:16,900 --> 00:01:22,310
+E devemos fazer isso para todas as assinaturas que esto aptas a serem seguras e protegidas contra esse erro.
+
+17
+00:01:22,510 --> 00:01:30,340
+Ento, o componente loggin tambm ir verificar se o carregamento de subs  verdadeiro ou se no , pelo menos, no
+
+18
+00:01:30,340 --> 00:01:33,800
+cai indefinido, caso em que vou cancelar a inscrio.
+
+19
+00:01:33,970 --> 00:01:35,790
+Ento isso  carregar e se inscrever.
+
+20
+00:01:35,800 --> 00:01:38,960
+Tambm devemos fazer o mesmo em todos os componentes do Avro.
+
+21
+00:01:39,130 --> 00:01:40,590
+Ento, incentive o treinamento.
+
+22
+00:01:40,600 --> 00:01:41,420
+No  relevante.
+
+23
+00:01:41,440 --> 00:01:45,790
+Ns no temos motor destruir l ns no temos uma assinatura l e parar de treinar.
+
+24
+00:01:45,790 --> 00:01:52,630
+Ns tambm no temos isso em um novo treinamento, embora o faamos aqui, na ONG no destruda, recebemos duas assinaturas.
+
+25
+00:01:52,660 --> 00:02:00,070
+Temos que verificar cada um deles para verificar se o exerccio  uma assinatura e somente se isso no for
+
+26
+00:02:00,100 --> 00:02:02,500
+indefinido somente depois de cancelar a inscrio.
+
+27
+00:02:02,740 --> 00:02:06,100
+E o mesmo  verdade para a assinatura de carregamento,  claro.
+
+28
+00:02:06,250 --> 00:02:15,520
+Ento, somente se este no  o nico encontro de dados que eu quero para cancelar a inscrio e treinamentos passados l, tambm temos
+
+29
+00:02:15,520 --> 00:02:16,460
+uma assinatura.
+
+30
+00:02:16,600 --> 00:02:24,400
+Ento, aqui eu tambm devo verificar se esta assinatura do Xchange, se esta subscrio existe apenas se
+
+31
+00:02:24,400 --> 00:02:27,580
+existir apenas, ento vamos cancelar a inscrio.
+
+32
+00:02:27,850 --> 00:02:34,690
+Agora, no prprio componente de treinamento, temos uma assinatura e no descontinuamos.
+
+33
+00:02:34,700 --> 00:02:37,320
+Ento, isso  algo que definitivamente precisamos consertar.
+
+34
+00:02:37,390 --> 00:02:45,750
+Adicione o stroy aqui, porque se voc esquecer, corre o risco de vazar memria.
+
+35
+00:02:45,980 --> 00:02:52,560
+Ento, vamos ngi vamos adicionar este ano e em greve e vamos verificar se esta subscrio de
+
+36
+00:02:52,740 --> 00:02:57,440
+exerccio existe e se no existir, ento eu vou us-lo e desinscrev-lo.
+
+37
+00:02:57,440 --> 00:03:03,690
+To boa coisa que verificamos isso e um componente de boas-vindas no recebemos nenhuma assinatura no componente do aplicativo.
+
+38
+00:03:03,840 --> 00:03:09,690
+L ns temos este Lisner que ns inicializamos mas ao invs disso  tratado em um servio.
+
+39
+00:03:09,930 --> 00:03:18,150
+Ento, com isso, agora melhoramos todas as nossas assinaturas e fixamos o posicionamento do fogo
+
+40
+00:03:18,240 --> 00:03:19,810
+angular do mdulo.
+
+41
+00:03:19,830 --> 00:03:24,120
+Agora, antes de adicionarmos o carregamento lento, h mais coisas que podemos fazer em relao aos mdulos.
+

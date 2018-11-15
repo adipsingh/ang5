@@ -1,0 +1,128 @@
+1
+00:00:02,260 --> 00:00:10,150
+Por isso, implementamos a funcionalidade de download e estamos controlando-a totalmente atravs do nosso servio de olhos.
+
+2
+00:00:10,210 --> 00:00:16,870
+Agora temos outro elemento de interface do usurio que implementamos apenas alguns minutos atrs, se tivermos uma olhada
+
+3
+00:00:16,870 --> 00:00:18,410
+na tela de login.
+
+4
+00:00:18,760 --> 00:00:26,240
+O que sobre esta lanchonete que estamos lidando no servio de fora estavam exibindo esta lanchonete uma mensagem de
+
+5
+00:00:26,240 --> 00:00:27,920
+refrigerante na parte inferior.
+
+6
+00:00:28,000 --> 00:00:29,880
+Sempre que recebemos um erro.
+
+7
+00:00:29,980 --> 00:00:35,320
+No, na verdade, esse  um elemento da interface do usurio que tambm podemos precisar de outros lugares no aplicativo.
+
+8
+00:00:35,350 --> 00:00:43,180
+Portanto, uma boa melhoria do aplicativo  realmente adicionar um mtodo a todos os usurios do Servio
+
+9
+00:00:43,180 --> 00:00:51,770
+de Gelo, que podemos chamar de um bar de show com uma mensagem, uma ao e uma durao.
+
+10
+00:00:52,060 --> 00:00:54,960
+E onde agora usamos essa lanchonete.
+
+11
+00:00:55,250 --> 00:01:02,150
+Ento, agora vou adicionar injetvel ao servio da dvida que  importado da Anglo COOREY para que possamos injetar
+
+12
+00:01:02,150 --> 00:01:09,370
+o servio de lanchonete do pai Matt, que ir injetar adicionando uma lanchonete no construtor que  do tipo.
+
+13
+00:01:09,400 --> 00:01:09,840
+Matt
+
+14
+00:01:09,840 --> 00:01:14,000
+Snack Bar que precisa ser importado de material angular ET.
+
+15
+00:01:15,250 --> 00:01:23,800
+E agora podemos simplesmente chamar essa lanchonete aberta e passar a mensagem para a ao.
+
+16
+00:01:24,110 --> 00:01:32,660
+E tambm meu conflito aqui como um argumento no  meu conflito, mas um objeto onde eu defino a durao para o
+
+17
+00:01:32,660 --> 00:01:37,640
+argumento de durao que estou obtendo aqui como o primeiro argumento desse mtodo.
+
+18
+00:01:38,000 --> 00:01:43,740
+Agora temos esse mtodo reutilizvel de lanchonete que podemos usar dentro do servio desativado.
+
+19
+00:01:43,820 --> 00:01:49,580
+L ns j estamos injetando para voc Ice Service para que possamos simplesmente ir a todos os
+
+20
+00:01:49,670 --> 00:01:57,050
+casos em que utilizamos este snack bar aberto que so esses dois em cadastro e log in e ao invs de chamar
+
+21
+00:01:57,050 --> 00:01:58,320
+este snack bar aberto.
+
+22
+00:01:58,340 --> 00:02:06,470
+Agora vou chamar isso de voc eu servio show snack bar onde a minha mensagem apenas a mensagem de erro onde
+
+23
+00:02:06,470 --> 00:02:11,200
+a ao ainda  nula e para duraes de 3000 como morto.
+
+24
+00:02:11,510 --> 00:02:17,770
+E ento eu posso remover essa lanchonete aberta do You Ice Service que voc , na verdade, do oficial
+
+25
+00:02:17,780 --> 00:02:23,290
+deste ano do usurio do registro Meffert e para fazer login  exatamente o mesmo mtodo.
+
+26
+00:02:23,510 --> 00:02:29,630
+Um servio show snack bar com a mensagem de erro null como uma ao e trs segundos.
+
+27
+00:02:30,080 --> 00:02:35,600
+E agora posso remover a injeo da lanchonete de Matt desse servio.
+
+28
+00:02:35,630 --> 00:02:40,790
+Portanto, esta  agora uma pequena melhoria que garante staed em nossa aplicao.
+
+29
+00:02:40,790 --> 00:02:47,100
+Se eu fizer logout eu ainda recebo o meu erro ou uma lanchonete na parte inferior, se falhar.
+
+30
+00:02:47,300 --> 00:02:53,390
+Mas agora estamos controlando isso em um lugar central tambm, o que o torna mais reutilizvel e poupa
+
+31
+00:02:53,390 --> 00:02:58,130
+o incmodo de injetar um snack bar em todos os lugares onde queremos us-lo.
+
+32
+00:02:58,130 --> 00:03:03,880
+Isso tambm nos permite melhorar o tratamento de erros de outras partes do aplicativo.
+

@@ -1,0 +1,40 @@
+1
+00:00:02,350 --> 00:00:05,080
+Hasta ahora, ya hemos logrado mucho.
+
+2
+00:00:05,080 --> 00:00:09,700
+Y nuestra aplicacin ya se ve bien y funciona bien.
+
+3
+00:00:09,880 --> 00:00:17,470
+Todava hay cosas que podemos pulir que podemos optimizar tanto desde nuestra ptica como desde
+
+4
+00:00:17,470 --> 00:00:20,800
+una perspectiva tcnica desde una perspectiva ptica.
+
+5
+00:00:20,800 --> 00:00:27,510
+Podramos, por ejemplo, agregar un mejor manejo de errores, especialmente durante la autenticacin, y quizs tambin mostrar algunos
+
+6
+00:00:27,520 --> 00:00:29,820
+indicadores de algn indicador de carga.
+
+7
+00:00:29,830 --> 00:00:38,290
+Si bien nos estamos afiliando y desde una perspectiva tcnica podramos dividir nuestro mdulo de aplicacin en mdulos adicionales
+
+8
+00:00:38,290 --> 00:00:44,760
+para que est menos lleno e implemente la carga lenta de la parte de capacitacin.
+
+9
+00:00:44,770 --> 00:00:47,380
+Estas son las cosas que abordar en este mdulo.
+
+10
+00:00:47,380 --> 00:00:48,530
+As que vamos a sumergirnos.
+

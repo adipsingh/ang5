@@ -1,0 +1,408 @@
+1
+00:00:02,480 --> 00:00:03,580
+A ltima aula.
+
+2
+00:00:03,710 --> 00:00:07,180
+Criamos nosso mdulo de roteamento off.
+
+3
+00:00:07,220 --> 00:00:11,960
+Agora quero carregar minhas rotas de treinamento em seu prprio mdulo.
+
+4
+00:00:11,960 --> 00:00:17,540
+No entanto, para o treino, quero fazer este laser cedo, o que significa apenas quando realmente precisamos dele.
+
+5
+00:00:17,620 --> 00:00:20,300
+Voc fora de rotas deve estar disponvel imediatamente.
+
+6
+00:00:20,300 --> 00:00:26,840
+Porque apesar de verificarmos seu estado de sindicalizao na inicializao e redirecionar o usurio se ele for autenticado, a
+
+7
+00:00:27,560 --> 00:00:33,200
+primeira pgina que realmente carregamos  uma pgina de login, porque  muito provvel que precisemos dela.
+
+8
+00:00:33,440 --> 00:00:40,850
+O componente de treinamento das pginas de treinamento no  to provvel de ser necessrio, porque se o
+
+9
+00:00:40,850 --> 00:00:48,360
+usurio no estiver bloqueado, no precisamos carreg-lo com antecedncia, portanto, podemos seguir esse caminho e tambm coloc-lo em
+
+10
+00:00:48,360 --> 00:00:50,770
+um mdulo de rota de treinamento.
+
+11
+00:00:50,830 --> 00:00:55,560
+No entanto, um que ser carregado mal Primeiro de tudo que est no modelo.
+
+12
+00:00:55,620 --> 00:00:58,470
+Vou cham-lo de treinamento de roteamento desse mdulo embora.
+
+13
+00:00:58,510 --> 00:01:00,050
+Sim, esse  o nome completo.
+
+14
+00:01:00,300 --> 00:01:05,000
+E vai exportar um mdulo de roteamento de treinamento de classe.
+
+15
+00:01:05,280 --> 00:01:12,180
+E este  um mdulo angular normal que  decorado com mdulos Engy que precisamos importar de um
+
+16
+00:01:12,450 --> 00:01:13,560
+nico ou tribunal.
+
+17
+00:01:13,800 --> 00:01:19,330
+Ento importe mdulo ngi de coordenar angular.
+
+18
+00:01:19,470 --> 00:01:27,900
+Agora ns configuramos nossa rota ento eu crio esta constante de rotas que  do tipo rotas
+
+19
+00:01:27,900 --> 00:01:31,580
+que ns importamos do pacote do roteador angular.
+
+20
+00:01:31,700 --> 00:01:33,970
+E aqui eu adiciono esta rota de sinalizao.
+
+21
+00:01:33,980 --> 00:01:44,880
+Acabei de cortar agora no mdulo DNG Vou adicionar minhas importaes e apontar para o mdulo do roteador aqui.
+
+22
+00:01:45,140 --> 00:01:48,910
+Tudo isso precisa ser importado do pacote do roteador.
+
+23
+00:01:48,980 --> 00:01:56,150
+Ento Afterall  tudo implorado mdulo roteador e aqui todos ns chamamos para criana e passar nossas rotas ou nossa
+
+24
+00:01:56,150 --> 00:01:56,710
+nica rota.
+
+25
+00:01:56,710 --> 00:02:00,310
+Neste caso, tambm exportarei isso.
+
+26
+00:02:00,350 --> 00:02:02,330
+Ento, mdulo de roteador de exportao.
+
+27
+00:02:02,410 --> 00:02:04,030
+No muda.
+
+28
+00:02:04,130 --> 00:02:08,390
+Agora tambm preciso importar o componente de treinamento aqui porque o usamos neste outono.
+
+29
+00:02:08,420 --> 00:02:13,290
+Ento, o componente de treinamento e, em seguida,  este componente de treinamento aqui.
+
+30
+00:02:14,390 --> 00:02:16,470
+E estamos usando um servio aqui.
+
+31
+00:02:16,580 --> 00:02:26,310
+Ento eu preciso importar dados para importar desprevenidos de surpresa.
+
+32
+00:02:26,360 --> 00:02:33,110
+Agora, poderamos tambm adicionar ao provedor 40 de surpresa o mdulo de roteamento de treinamento.
+
+33
+00:02:33,320 --> 00:02:36,110
+Eu estou falando sobre esse provedor.
+
+34
+00:02:36,420 --> 00:02:39,760
+No entanto, tambm podemos alterar nossa configurao.
+
+35
+00:02:39,800 --> 00:02:45,530
+Primeiro de tudo, deixe-me remover o componente de treinamento no mdulo de roteamento de aplicativos.
+
+36
+00:02:45,530 --> 00:02:51,620
+Agora vou deixar de guarda aqui no mdulo de roteamento de aplicativos, pois logo alterarei isso, de modo que precisssemos
+
+37
+00:02:51,620 --> 00:02:57,310
+de um arquivo em disco e que fornec-lo aqui faz mais sentido do que fornec-lo no mdulo de treinamento.
+
+38
+00:02:57,410 --> 00:03:00,790
+E desde que ns os fornecemos em baixo nvel, ser um singleton.
+
+39
+00:03:00,860 --> 00:03:06,200
+Ento, em um mdulo de treinamento, ele tambm estar disponvel em um mdulo de roteamento de treinamento.
+
+40
+00:03:06,500 --> 00:03:13,850
+Ento, com isso, estamos carregando nossas rotas comerciais ansiosamente no momento para obt-las, s temos que ter certeza de que no
+
+41
+00:03:13,850 --> 00:03:20,240
+mdulo de treinamento ns importamos o mdulo de roteamento de treinamento para que adicionemos ao array de importaes
+
+42
+00:03:20,240 --> 00:03:25,550
+e adicione uma declarao de importao apontando para o treinamento arquivo do mdulo de roteamento.
+
+43
+00:03:25,820 --> 00:03:29,780
+Com isso,  carregado ansiosamente e podemos voltar para o aplicativo.
+
+44
+00:03:30,050 --> 00:03:34,150
+E como voc v, faa o login e veja nossas rotas de treinamento.
+
+45
+00:03:34,460 --> 00:03:38,880
+Agora vamos implementar o carregamento lento para fazer isso.
+
+46
+00:03:39,140 --> 00:03:42,960
+Eu realmente vou mudar alguma coisa no meu mdulo de aplicativo.
+
+47
+00:03:43,010 --> 00:03:47,790
+No adicionarei mais o mdulo de treinamento s importaes.
+
+48
+00:03:47,810 --> 00:03:55,070
+Vou remov-lo do array imports e ele ir remover a importao desse arquivo aparecer em vez disso vou usar
+
+49
+00:03:55,070 --> 00:04:01,430
+um padro numrico suportado pelo fluxo de trabalho de construo que estamos usando aqui ou no final
+
+50
+00:04:02,270 --> 00:04:10,190
+por angular onde no mdulo de roteamento do aplicativo vou cadastrar uma segunda rota onde o tipoff est treinando como ns
+
+51
+00:04:10,190 --> 00:04:17,060
+tnhamos antes, mas onde eu no atribuo um componente, mas ao invs disso, load children  a palavra
+
+52
+00:04:17,060 --> 00:04:18,460
+chave para o carregamento lento.
+
+53
+00:04:18,560 --> 00:04:24,650
+E aqui ns passamos uma string porque se passssemos um tipo e adicionssemos uma importao, ns j a incluiramos
+
+54
+00:04:24,650 --> 00:04:26,030
+no pacote neste momento.
+
+55
+00:04:26,090 --> 00:04:31,010
+Ento tem que ser uma string para que possa ser analisada em tempo de execuo.
+
+56
+00:04:31,010 --> 00:04:36,080
+Aqui agora temos que apontar para o arquivo para o mdulo que planejamos importar.
+
+57
+00:04:36,290 --> 00:04:42,320
+Quando chegamos a essa rota e que estar no mdulo de treinamento me desculpe na pasta de
+
+58
+00:04:42,470 --> 00:04:49,220
+treinamento o mdulo de treinamento atracou TS aqui e l queremos acessar a clusula do mdulo de treinamento que indicamos
+
+59
+00:04:49,220 --> 00:04:52,640
+adicionando uma hash tag e depois um mdulo de treinamento.
+
+60
+00:04:52,730 --> 00:04:59,100
+Isso  necessrio porque, teoricamente, o nome da sua turma pode ser diferente do nome do arquivo.
+
+61
+00:04:59,150 --> 00:05:05,810
+Ento agora ns estamos dizendo ao pescador que se ns estamos direcionando o treinamento slash voc deveria carregar o cdigo relacionado
+
+62
+00:05:05,810 --> 00:05:12,170
+ao mdulo de treinamento e analisar o que est l e l ns temos o mdulo de roteamento de treinamento
+
+63
+00:05:12,170 --> 00:05:13,350
+para o filho.
+
+64
+00:05:13,400 --> 00:05:20,120
+Ento, ns ainda vamos chegar a esta rota, no entanto, importante aqui, agora temos que remover o treinamento e ter
+
+65
+00:05:20,120 --> 00:05:27,010
+um caminho vazio, porque isso ser anexado a este caminho de treinamento que temos no mdulo de roteamento de aplicativos.
+
+66
+00:05:28,010 --> 00:05:35,930
+Ento, com isso, temos o nosso carregamento lento configurado e isso vai preguiosamente carregar no apenas o arquivo de rotas dos
+
+67
+00:05:36,230 --> 00:05:39,370
+EUA, mas qualquer componente de treinamento relacionado a coisas.
+
+68
+00:05:39,410 --> 00:05:44,920
+Ento, qualquer coisa que importamos aqui no mdulo de treinamento com isso se recarregarmos.
+
+69
+00:05:44,940 --> 00:05:52,510
+Sim ns recebemos este erro aqui que o servio de treinamento est perdendo o ngulo de tempestade.
+
+70
+00:05:52,570 --> 00:05:59,400
+Isso faz sentido, e o servio de treinamento que estamos injetando  o ngulo de fogo aqui e o ngulo
+
+71
+00:05:59,400 --> 00:06:02,130
+de fogo  fornecido no mdulo de treinamento.
+
+72
+00:06:02,150 --> 00:06:08,690
+O problema  que o mdulo de treinamento s  carregado quando voc visita um treinamento de barra.
+
+73
+00:06:08,690 --> 00:06:12,660
+Ns fornecemos o servio de treinamento e o marechal embora.
+
+74
+00:06:12,710 --> 00:06:17,500
+Ento, em um ponto anterior do tempo,  por isso que falta o ngulo de Firestorm Marshall.
+
+75
+00:06:17,810 --> 00:06:23,760
+Agora poderamos fornecer o servio de treinamento e o mdulo de treinamento, mas enfrentaremos um problema l.
+
+76
+00:06:23,840 --> 00:06:26,200
+Ns olhamos nosso servio de escritrio.
+
+77
+00:06:26,390 --> 00:06:28,820
+Ns injetamos o servio de treinamento l.
+
+78
+00:06:28,880 --> 00:06:35,090
+Injetamos servios de treinamento porque ns chamamos cancelar assinaturas, ento o servio depende do servio de treinamento
+
+79
+00:06:35,090 --> 00:06:42,290
+que depende do servio ou mdulo do ngulo de ataque de incndio e o servio deve ser fornecido na
+
+80
+00:06:42,290 --> 00:06:48,230
+ferramenta de lanamento porque precisamos que as ferramentas de servio nos atendam. no momento em que
+
+81
+00:06:48,230 --> 00:06:49,720
+o aplicativo  iniciado.
+
+82
+00:06:49,730 --> 00:06:58,540
+Portanto, a soluo  reutilizar o mdulo Firestar angular para o nosso mdulo de aplicativo, adicionado  matriz de importao do mdulo
+
+83
+00:06:58,550 --> 00:07:04,790
+de aplicativo e tambm adicionar uma instruo de importao no topo do arquivo em que voc
+
+84
+00:07:04,850 --> 00:07:09,940
+importa o ngulo do mdulo Firestar do ngulo de disparo para cortar tempestade.
+
+85
+00:07:10,140 --> 00:07:15,260
+Com isso, podemos ir para o mdulo de treinamento e remover o ngulo do mdulo
+
+86
+00:07:15,260 --> 00:07:18,760
+Firestar das importaes existentes e remover a declarao de importao aqui.
+
+87
+00:07:18,800 --> 00:07:23,280
+Agora, com isso, se salvarmos, a flecha que vimos um segundo atrs deve ter desaparecido.
+
+88
+00:07:24,130 --> 00:07:30,220
+Agora, temos uma nova era, embora essa era confine este mdulo de treinamento de mdulo.
+
+89
+00:07:30,220 --> 00:07:35,840
+A razo para isso deve ser que, no mdulo de roteamento do aplicativo, voc emite aqui omitir.
+
+90
+00:07:35,860 --> 00:07:38,360
+Isso no acaba com a nave sem pontos.
+
+91
+00:07:38,400 --> 00:07:41,470
+TS este caminho que voc est no mdulo de roteamento de aplicativos.
+
+92
+00:07:41,650 --> 00:07:50,850
+Se consertarmos essa recompilao com chumbo e recarregarmos o aplicativo, poderemos efetuar login com xito e
+
+93
+00:07:51,720 --> 00:07:54,390
+acessar nossos componentes de treinamento.
+
+94
+00:07:54,390 --> 00:08:05,540
+Se voc inspecionar a guia de rede, ver que, se fizermos logout e recarregarmos e agora fizermos login, um monte de
+
+95
+00:08:08,400 --> 00:08:10,560
+coisas novas sero carregadas.
+
+96
+00:08:10,710 --> 00:08:13,510
+Entre eles, o pedao do mdulo de treinamento.
+
+97
+00:08:13,620 --> 00:08:16,630
+E este  o carregamento lento em ao.
+
+98
+00:08:16,650 --> 00:08:21,530
+Ento, com isso, estamos carregando isso preguiosamente, o que significa apenas quando realmente precisamos disso.
+
+99
+00:08:21,600 --> 00:08:25,290
+O que, claro, diminui o tamanho do nosso pacote inicial.
+
+100
+00:08:25,290 --> 00:08:31,170
+Ento, o que baixamos aqui  como implementamos o carregamento lento e como melhoramos
+
+101
+00:08:31,260 --> 00:08:33,090
+o desempenho de nosso aplicativo.
+
+102
+00:08:33,090 --> 00:08:38,280
+Agora eu quero ajustar isso agora tambm mudando a maneira como usamos nossos desprevenidos.
+

@@ -1,0 +1,340 @@
+1
+00:00:02,360 --> 00:00:06,770
+At agora, no mdulo, aplicamos vrias melhorias pticas.
+
+2
+00:00:06,830 --> 00:00:11,220
+Agora podemos trabalhar no lado tcnico e no lado tcnico.
+
+3
+00:00:11,270 --> 00:00:14,400
+Eu quero dizer principalmente dividir o mdulo do aplicativo.
+
+4
+00:00:14,420 --> 00:00:16,370
+Tudo bem, podemos deixar assim.
+
+5
+00:00:16,370 --> 00:00:22,900
+No temos um aplicativo super grande, mas j temos muitas importaes e declaraes no mdulo do aplicativo.
+
+6
+00:00:22,910 --> 00:00:29,360
+Ento, faria sentido dividir nosso aplicativo em mdulos de recursos e talvez tambm adicionar um mdulo central.
+
+7
+00:00:29,360 --> 00:00:31,720
+Agora vamos ver o que faz sentido.
+
+8
+00:00:32,320 --> 00:00:39,020
+Podemos certamente adicionar mdulos de recursos, podemos adicionar um mdulo de recurso para um recurso de treinamento e um
+
+9
+00:00:39,030 --> 00:00:40,630
+para voc fora do recurso.
+
+10
+00:00:40,690 --> 00:00:46,120
+Portanto, esses dois mdulos certamente fazem sentido e nos permitem mover os componentes que pertencem
+
+11
+00:00:46,120 --> 00:00:50,920
+a um determinado recurso para esse mdulo e, portanto, limpar o mdulo do aplicativo.
+
+12
+00:00:51,100 --> 00:00:52,240
+Ento vamos comear com isso.
+
+13
+00:00:52,270 --> 00:00:58,160
+Vamos comear com um mdulo de recurso 40 de parte ao lado dos servidores desligados e desprevenidos.
+
+14
+00:00:58,270 --> 00:01:04,820
+Vou adicionar um mdulo ofter que sim vou simplesmente exportar uma classe aqui de mdulo.
+
+15
+00:01:05,020 --> 00:01:10,270
+E isso se transformou em um mdulo adicionando o decorador de mdulo Ngee.
+
+16
+00:01:10,270 --> 00:01:16,390
+Agora, o decorador de mdulo Ngee precisa ser importado e importado de um ncleo angular.
+
+17
+00:01:16,540 --> 00:01:24,850
+Portanto, certifique-se de adicionar essa importao na parte superior do mdulo de importao de arquivo no ncleo angular.
+
+18
+00:01:25,180 --> 00:01:33,280
+Com isso adicionado Devemos adicionar algumas configuraes, enquanto so um objeto que passamos para o mdulo Engy para o
+
+19
+00:01:33,280 --> 00:01:34,250
+mdulo Engy.
+
+20
+00:01:34,600 --> 00:01:38,110
+E aqui temos que adicionar algumas declaraes.
+
+21
+00:01:38,110 --> 00:01:46,240
+Portanto, os componentes que usamos neste mdulo talvez precisem adicionar algumas importaes e talvez seja necessrio adicionar
+
+22
+00:01:46,300 --> 00:01:47,520
+algumas exportaes.
+
+23
+00:01:47,520 --> 00:01:49,030
+Agora vamos ver o que precisamos.
+
+24
+00:01:49,300 --> 00:01:55,930
+No adicionamos provedores aqui porque, na verdade, devemos sempre fornecer seus servios no mdulo do aplicativo
+
+25
+00:01:55,930 --> 00:01:57,760
+se voc planeja us-los.
+
+26
+00:01:57,760 --> 00:02:03,070
+Aplicao ampla ou em geral, se voc planeja us-los como um singleton.
+
+27
+00:02:03,080 --> 00:02:07,930
+Uma vez que voc possa aprender mais sobre isso no meu curso de guia completo, onde eu mergulho em
+
+28
+00:02:07,930 --> 00:02:12,300
+mdulos de maneira mais profunda  medida que mergulho em todos os tpicos angulares de maneira mais profunda.
+
+29
+00:02:12,400 --> 00:02:16,290
+Ento, quais declaraes devemos adicionar ao mdulo agora.
+
+30
+00:02:16,360 --> 00:02:18,180
+Ns olhamos o mdulo do mapa.
+
+31
+00:02:18,280 --> 00:02:23,560
+Certamente, temos que inscrever o componente e o componente de login que no pertencem ao
+
+32
+00:02:23,590 --> 00:02:26,240
+aplicativo inteiro, mas ao mdulo do recurso.
+
+33
+00:02:26,320 --> 00:02:31,660
+Ento, pegue-os nas declaraes no mdulo do aplicativo e removerei as importaes.
+
+34
+00:02:32,020 --> 00:02:36,510
+E, em vez disso, vou ao mdulo off e adiciono-lhes duas declaraes aqui.
+
+35
+00:02:36,880 --> 00:02:39,090
+Isso significa que todos ns temos que adicionar as importaes aqui.
+
+36
+00:02:39,160 --> 00:02:47,520
+Portanto, na importao para inscrever o componente na pasta Inscrio, o arquivo de componente de inscrio l e
+
+37
+00:02:47,520 --> 00:02:56,310
+o mesmo para o componente de login que  obtido da pasta de login e l do arquivo de
+
+38
+00:02:56,310 --> 00:02:57,810
+componente de login.
+
+39
+00:02:57,810 --> 00:03:02,480
+Ento, essas so as minhas declaraes que so relevantes para o mdulo off.
+
+40
+00:03:02,490 --> 00:03:05,360
+Agora, sobre as importaes e exportaes.
+
+41
+00:03:05,700 --> 00:03:12,350
+Bem, no mdulo de aplicativos, temos claramente nosso mdulo de material angular que importamos.
+
+42
+00:03:12,450 --> 00:03:18,300
+Este tambm temos roteamento e flex layout e o mdulo de formulrios e assim por diante.
+
+43
+00:03:18,300 --> 00:03:24,720
+Agora, o importante  ter em mente que s porque voc importa algo para
+
+44
+00:03:25,290 --> 00:03:32,640
+o aeroporto, tudo isso no o torna disponvel em mdulos, mesmo que esses mdulos sejam do
+
+45
+00:03:32,680 --> 00:03:40,830
+tipo filho em Marchal, porque voc pode pensar que desde que criamos isso mdulo que voc simplesmente
+
+46
+00:03:41,100 --> 00:03:43,180
+importou para importar mdulos.
+
+47
+00:03:43,180 --> 00:03:50,370
+E agora vamos para a seo off e l importar o arquivo Marchal e ento adicionar todos os mdulos ao
+
+48
+00:03:50,430 --> 00:03:53,950
+array de importaes do seu mdulo de aplicativo como este.
+
+49
+00:03:54,390 --> 00:04:03,690
+Se voc fizer isso, ele ser compilado com sucesso, mas seu aplicativo agora ser quebrado com vrias mensagens de erro.
+
+50
+00:04:03,710 --> 00:04:05,570
+Ns examinamos essas mensagens de erro.
+
+51
+00:04:06,630 --> 00:04:13,170
+Ns essencialmente recebemos mensagens como a forma Engy  desconhecida, mas tambm alguns componentes materiais so desconhecidos.
+
+52
+00:04:13,200 --> 00:04:15,310
+A razo para isso  o que eu acabei de dizer.
+
+53
+00:04:15,570 --> 00:04:22,890
+As coisas que voc importa no seu aplicativo Marchal no so passadas para o mdulo off, elas no so trocadas
+
+54
+00:04:22,890 --> 00:04:24,090
+entre os mdulos.
+
+55
+00:04:24,150 --> 00:04:26,730
+Cada mdulo funciona de forma independente.
+
+56
+00:04:27,030 --> 00:04:32,020
+Ento, o que voc precisa no mdulo off deve ser adicionado como uma importao l.
+
+57
+00:04:32,070 --> 00:04:39,110
+O mais importante  que, por exemplo, o mdulo e um mdulo que nos d acesso ao NGF e assim por diante.
+
+58
+00:04:39,210 --> 00:04:46,540
+Voc importou de um ngulo ou comum agora no mdulo off, temos que nos inscrever no componente loggin e
+
+59
+00:04:47,080 --> 00:04:48,850
+no componente log in.
+
+60
+00:04:48,850 --> 00:04:54,150
+Usamos a abordagem de forma reativa no componente Sign-Up of.
+
+61
+00:04:54,250 --> 00:04:57,270
+Usamos a abordagem de formulrios orientados por modelos.
+
+62
+00:04:57,280 --> 00:05:08,570
+Agora, isto significa que tambm precisaremos de adicionar mdulo de formulrios e mdulo de formulrios reativos s nossas importaes, tanto de onde so
+
+63
+00:05:08,610 --> 00:05:15,450
+importados nos fruns de Angola, como tambm de componentes de material de material angular.
+
+64
+00:05:15,590 --> 00:05:18,930
+ por isso que tambm precisamos adicionar o mdulo de material aqui.
+
+65
+00:05:19,170 --> 00:05:26,560
+Ento, certifique-se de adicionar isso em ordem no topo e, adicionalmente, a entrada e a importao
+
+66
+00:05:26,630 --> 00:05:29,100
+aqui para agora vamos voltar.
+
+67
+00:05:29,320 --> 00:05:32,520
+Isso parece melhor, mas o estilo est desligado.
+
+68
+00:05:32,560 --> 00:05:40,800
+A razo para isso  que tambm devemos importar nosso mdulo de layout flexvel neste mdulo de layout flex aqui, porque usamos
+
+69
+00:05:41,470 --> 00:05:45,730
+esse posicionamento de layout flex aqui e no obtemos um erro.
+
+70
+00:05:45,850 --> 00:05:49,220
+Mas as diretivas ainda no sero reconhecidas.
+
+71
+00:05:49,270 --> 00:05:58,820
+Ento vamos adicionar o mdulo de layout flex que voc importa do layout de flexo angular para fora se voc fizer isso.
+
+72
+00:05:58,920 --> 00:06:03,500
+Agora, isso parece muito melhor se voc der uma olhada no registro e no componente.
+
+73
+00:06:03,810 --> 00:06:10,170
+Agora, se voc est preocupado em aumentar seu tamanho Bunuel importando alguns mdulos, ambos aqui
+
+74
+00:06:10,170 --> 00:06:13,310
+no mdulo anti-partcula, este no  o caso.
+
+75
+00:06:13,470 --> 00:06:16,730
+Angular gerencia isso de forma inteligente nos bastidores.
+
+76
+00:06:16,950 --> 00:06:22,290
+Ento, o principal argumento  que, se voc usar algo em um mdulo que precisa importar,
+
+77
+00:06:22,290 --> 00:06:24,920
+as coisas no sero trocadas entre os mdulos.
+
+78
+00:06:24,960 --> 00:06:31,950
+Agora, esses ajustes tambm significam que podemos nos livrar do mdulo de formulrios reativos e do mdulo de formulrios a
+
+79
+00:06:32,040 --> 00:06:39,780
+partir do mdulo do aplicativo, porque usamos apenas o Fordham aqui no nosso mdulo off e tambm em parte do mdulo de
+
+80
+00:06:40,200 --> 00:06:41,830
+treinamento, uma vez criado.
+
+81
+00:06:41,880 --> 00:06:43,980
+Mas tudo isso se tornar um mdulo futuro.
+
+82
+00:06:44,010 --> 00:06:47,760
+Portanto, no h nada do componente Giddyap em que precisaramos disso.
+
+83
+00:06:47,760 --> 00:06:56,010
+Falando que na prxima palestra, criaremos nosso mdulo de treinamento e tambm reestruturaremos nosso aplicativo para
+
+84
+00:06:56,010 --> 00:06:57,130
+a Daten.
+
+85
+00:06:57,150 --> 00:06:58,750
+Ento vamos para isso.
+

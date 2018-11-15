@@ -1,0 +1,484 @@
+1
+00:00:02,170 --> 00:00:07,120
+Ento, na ltima aula, adicionamos tratamento de erros e mostramos uma mensagem de erro melhor.
+
+2
+00:00:07,120 --> 00:00:11,150
+Agora tambm quero mostrar um spinner enquanto aguardamos o login.
+
+3
+00:00:11,230 --> 00:00:14,480
+E alm disso, uma vez que estamos trancados.
+
+4
+00:00:14,710 --> 00:00:21,760
+Eu tambm quero mostrar um pequeno spinner quando estivermos na nova pgina de exerccios, porque as opes
+
+5
+00:00:21,760 --> 00:00:25,570
+disponveis carregam muito rpido, mas no esto l instantaneamente.
+
+6
+00:00:25,570 --> 00:00:28,700
+Ento isso  algo que eu tambm quero garantir.
+
+7
+00:00:28,750 --> 00:00:29,930
+Isso  possvel.
+
+8
+00:00:30,720 --> 00:00:34,880
+Para conseguir isso, podemos procurar um componente apropriado e o desafio.
+
+9
+00:00:34,940 --> 00:00:39,590
+Um spinner de progresso ou uma barra de progresso faz mais sentido.
+
+10
+00:00:39,600 --> 00:00:45,810
+Agora, uma barra de progresso pode no ser ideal aqui porque uma barra de progresso indica que
+
+11
+00:00:45,810 --> 00:00:48,950
+estamos enviando grandes blocos de dados em qualquer direo.
+
+12
+00:00:49,140 --> 00:00:56,730
+Assim, um spinner de progresso  o que voc v com mais frequncia nesses tipos de situaes para logons ou assim por
+
+13
+00:00:56,730 --> 00:00:57,250
+diante.
+
+14
+00:00:57,420 --> 00:01:05,120
+Ento, portanto, queremos ter um spinner e agora queremos ter um spinner indeterminado se voc quiser
+
+15
+00:01:05,120 --> 00:01:06,980
+ter um spinner indeterminado.
+
+16
+00:01:06,980 --> 00:01:13,880
+Voc poderia usar o spinner de progresso do mapa que j usamos e definir o modo para indeterminar ou
+
+17
+00:01:13,880 --> 00:01:19,310
+usar o spin-mat de atalho que  simplesmente o que voc v aqui apenas isso.
+
+18
+00:01:19,460 --> 00:01:24,140
+Ento, queremos mostrar esse girador enquanto aguardamos o login.
+
+19
+00:01:24,620 --> 00:01:30,290
+E isso significa que no componente de login aqui queremos mostrar, digamos, em vez do boto,
+
+20
+00:01:30,710 --> 00:01:34,460
+para que pudssemos,  claro, adicionar esse spinner de esteira ali.
+
+21
+00:01:34,460 --> 00:01:40,000
+Deixe-me adicion-lo aqui e depois voltar ao nosso aplicativo e sair.
+
+22
+00:01:40,220 --> 00:01:42,780
+Agora ns sempre vemos isso melhor aqui.
+
+23
+00:01:43,190 --> 00:01:45,440
+Ento ns temos esse spinner abaixo do boto.
+
+24
+00:01:45,500 --> 00:01:49,600
+Eu no quero ter uma grande carga, mas quero t-lo em vez do boto,  claro.
+
+25
+00:01:49,880 --> 00:01:55,960
+Portanto, precisamos usar o NGF para controlar se mostramos um boto ou um spinner.
+
+26
+00:01:56,060 --> 00:02:01,580
+A questo  qual  a nossa condio e a condio est morta.
+
+27
+00:02:01,640 --> 00:02:09,830
+Ns enviamos para o formulrio, mas ainda no recebemos uma resposta, por isso temos que gerenciar isso no servio de
+
+28
+00:02:10,390 --> 00:02:11,100
+desligamento l.
+
+29
+00:02:11,120 --> 00:02:19,880
+Ns chamamos nosso mtodo de logging e ns iniciamos este processo de log-in e terminamos quando chegamos a este ponto ou para bloquear
+
+30
+00:02:19,880 --> 00:02:25,640
+porque no bloco catch temos um erro, mas a submisso ainda est feita e queremos
+
+31
+00:02:25,640 --> 00:02:31,490
+comear logo antes de executarmos isso entre com o IIM-A e o mtodo de senha aqui.
+
+32
+00:02:31,520 --> 00:02:37,820
+Ento, o que eu preciso  de um emissor de evento adicional que me permita controlar a exibio
+
+33
+00:02:37,820 --> 00:02:43,120
+de um divisor e eu no controlarei ou criarei a eventa matter no servio desligado.
+
+34
+00:02:43,280 --> 00:02:49,940
+Em vez disso eu quero criar uma nova pasta compartilhada e pasta yep e nessa pasta compartilhada todos criam o
+
+35
+00:02:50,110 --> 00:02:51,930
+meu eu pensei Service Dot.
+
+36
+00:02:51,950 --> 00:02:54,860
+Sim arquivo e voc pode, naturalmente, o nomeou de forma diferente.
+
+37
+00:02:54,860 --> 00:03:00,980
+Estou chamando assim porque controla as funcionalidades globais da interface do usurio e todas
+
+38
+00:03:00,980 --> 00:03:11,410
+exportam apenas uma classe que tem o nome do servio de interface do usurio e essa classe simplesmente ter meu emissor de evento.
+
+39
+00:03:11,410 --> 00:03:26,450
+Ento, l eu vou importar assunto do nosso SJS e, em seguida, aqui criar meu estado de carregamento listener de evento alterado que  um
+
+40
+00:03:26,710 --> 00:03:34,490
+novo assunto que envolve um booleano triplicado se o carregamento comeou ou terminou.
+
+41
+00:03:34,490 --> 00:03:41,430
+Vamos dizer e agora com esse servio criado um fornecido no mdulo.
+
+42
+00:03:41,480 --> 00:03:47,000
+Ento eu vou l e na matriz do provedor eu vou te admirar servio de gelo para o pai.
+
+43
+00:03:47,000 --> 00:03:52,490
+Tambm precisamos adicionar uma importao na parte superior apontando para a pasta compartilhada e, em seguida,
+
+44
+00:03:53,320 --> 00:04:01,280
+voc pode arquivar o arquivo com o servio fornecido, podemos voltar para o servio off e agora simplesmente usar esse estado de carregamento.
+
+45
+00:04:01,290 --> 00:04:04,580
+Mudou Lisner para qualquer servio desligado.
+
+46
+00:04:04,620 --> 00:04:11,750
+Primeiro de tudo injetar servio DeWyze lig-lo a uma propriedade chamada voc um servio talvez tipo  o servio de
+
+47
+00:04:11,750 --> 00:04:17,960
+vocs e, claro, para o papai todos ns precisamos adicionar um servio de importao de importao da
+
+48
+00:04:17,960 --> 00:04:25,060
+pasta compartilhada e, em seguida, seu servio Idylls e agora podemos usar isso servio no log no mtodo de registro.
+
+49
+00:04:25,130 --> 00:04:31,250
+Ento, aqui no logon, entre em contato com o servio de gelo e eu chamarei o
+
+50
+00:04:31,280 --> 00:04:39,240
+prximo mtodo no estado de carregamento alterado, assunto, tudo configurado como true para indicar que comeamos a carregar e tambm emitirei
+
+51
+00:04:39,240 --> 00:04:42,690
+um evento assim que terminarmos aqui de duas quedas.
+
+52
+00:04:42,690 --> 00:04:49,830
+E como eu disse, tambm vou fazer o mesmo e o bloco catch porque ns falhamos, mas ainda assim fomos bem
+
+53
+00:04:49,830 --> 00:04:51,680
+sucedidos em enviar o pedido deles.
+
+54
+00:04:51,750 --> 00:04:57,570
+Ento, precisamos remover a lasca e mostrar o boto novamente e o mesmo para registrar aqui.
+
+55
+00:04:57,570 --> 00:05:00,980
+Eu tambm comearei definindo isso como verdadeiro.
+
+56
+00:05:01,230 --> 00:05:09,420
+E ento, em seguida, bloquear eu quero parar tudo e defina o estado de carregamento para false.
+
+57
+00:05:09,510 --> 00:05:16,020
+Com isso, podemos agora assinar esse listener de estado de carregamento alterado e queremos fazer isso
+
+58
+00:05:16,020 --> 00:05:17,800
+no componente de login.
+
+59
+00:05:17,820 --> 00:05:25,630
+Ento, aqui esto ULS e checaram o servio DeWyze e vincul-lo a uma propriedade chamada servio para o pai de todos ns
+
+60
+00:05:25,630 --> 00:05:27,740
+precisamos adicionar a importao,  claro.
+
+61
+00:05:27,760 --> 00:05:33,910
+Ento, quando voc faz o login no componente que est se movendo para a pasta compartilhada e importando do
+
+62
+00:05:34,210 --> 00:05:36,270
+arquivo do usurio injetando-o no construtor.
+
+63
+00:05:36,520 --> 00:05:44,950
+E com esse objeto que podemos adicionar uma nova propriedade est carregando o que inicialmente  falso e que agora mudamos
+
+64
+00:05:44,950 --> 00:05:48,250
+sempre que recebemos um novo estado de carregamento.
+
+65
+00:05:48,250 --> 00:05:55,000
+Portanto, assinarei este emissor de evento alterado de estado de carregamento e isso significa que preciso
+
+66
+00:05:55,050 --> 00:05:56,110
+armazenar a assinatura.
+
+67
+00:05:56,110 --> 00:06:05,650
+Ento, eu vou importar a assinatura da nossa troca Sim e ele ir criar uma nova propriedade privada no
+
+68
+00:06:06,010 --> 00:06:13,300
+topo que ir nomear o carregamento Suppes que  apenas de tipo de assinatura.
+
+69
+00:06:13,480 --> 00:06:16,240
+Agora, uma entrada em um anncio, podemos configurar uma inscrio.
+
+70
+00:06:16,240 --> 00:06:24,370
+Eu posso l ligar para o meu carregamento Suppes e eu acho que esse estado de carregamento do servio de UI mudou o
+
+71
+00:06:24,550 --> 00:06:31,180
+assinante que ser acionado sempre que acionamos o estado de carregamento alterado como fazemos no servio desligado l eu
+
+72
+00:06:31,230 --> 00:06:35,860
+obtenho  estado de carregamento assim faz Boullion que  ou verdadeiro ou falso.
+
+73
+00:06:36,250 --> 00:06:38,420
+E eu quero definir isso est carregando.
+
+74
+00:06:38,620 --> 00:06:45,190
+Ento essa propriedade que eu criei um segundo atrs para o valor de seu valor de carregamento de Sotoudeh
+
+75
+00:06:45,190 --> 00:06:47,140
+estava emitindo com o assunto.
+
+76
+00:06:47,140 --> 00:06:50,850
+E, claro, temos que cancelar a inscrio no ngi no stroy.
+
+77
+00:06:50,890 --> 00:06:53,430
+Ento vamos implementar no destrudo.
+
+78
+00:06:53,530 --> 00:07:03,830
+Certifique-se tambm de adicionar uma importao que est vindo de coord angular e implementar a energia no mtodo stroy, portanto, para
+
+79
+00:07:03,830 --> 00:07:10,970
+que a ONG seja destruda, chegue  minha assinatura de loadings e chame o cancelamento
+
+80
+00:07:11,110 --> 00:07:14,350
+de assinatura para evitar vazamentos de memria.
+
+81
+00:07:14,540 --> 00:07:22,010
+Com isso, obtemos nosso estado de carregamento e podemos agora us-lo no modelo do componente de carregamento.
+
+82
+00:07:22,010 --> 00:07:29,120
+E l, finalmente, podemos ligar o boto com o NGF para no carregar apenas para mostr-lo enquanto no
+
+83
+00:07:29,120 --> 00:07:34,520
+estamos carregando e o girador no aberant deve ser mostrado sempre que estivermos carregando.
+
+84
+00:07:34,520 --> 00:07:36,500
+Ento, quando est carregando  verdade.
+
+85
+00:07:36,830 --> 00:07:39,380
+E com isso vamos ver que uma ao para a tela de login.
+
+86
+00:07:39,500 --> 00:07:41,540
+Vamos voltar ao nosso aplicativo.
+
+87
+00:07:41,540 --> 00:07:43,040
+Vamos inserir credenciais.
+
+88
+00:07:43,280 --> 00:07:47,240
+E agora voc ter que observar de perto, porque o fogo  muito rpido.
+
+89
+00:07:47,240 --> 00:07:50,710
+Mas por um curto perodo de tempo voc v o spinner.
+
+90
+00:07:50,870 --> 00:07:56,540
+Agora vamos fazer o mesmo para a pgina de inscrio e vou simplesmente repetir todo o padro l.
+
+91
+00:07:56,570 --> 00:07:58,230
+O componente de inscrio.
+
+92
+00:07:58,280 --> 00:08:08,340
+Primeiro de tudo injetar seu servio e, portanto, sua fila, precisamos adicionar a importao para o servio United.
+
+93
+00:08:08,900 --> 00:08:11,340
+E eu planejo armazenar uma assinatura.
+
+94
+00:08:11,360 --> 00:08:19,490
+Ento, eu vou importar a assinatura da nossa troca Sim, aqui tambm dois e depois vou adicionar duas propriedades est carregando
+
+95
+00:08:19,490 --> 00:08:22,390
+o que  falso e uma propriedade privada.
+
+96
+00:08:22,460 --> 00:08:31,940
+Minha assinatura de carregamento que  do tipo assinatura e, em seguida, uma entrada em tudo rapidamente atribuir minha subscrio de
+
+97
+00:08:32,030 --> 00:08:38,720
+carregamento assinatura 2D eu recebo do estado flutuante alterado assunto no servio de gelo onde
+
+98
+00:08:39,750 --> 00:08:48,060
+eu tambm  carregamento  booleano e onde uma densidade est carregando propriedade daquele componente de modo que este
+
+99
+00:08:48,060 --> 00:08:56,930
+aqui at o valor do emitido est carregando Boullion e agora  claro que eu tambm implementar na destruio deste
+
+100
+00:08:56,960 --> 00:09:02,110
+mtodo para evitar vazamentos de memria da minha assinatura de carregamento.
+
+101
+00:09:02,300 --> 00:09:12,500
+Ento, para isso, tambm temos que importar no stroy de um ncleo angular e implementar o DNG no mtodo destroy na
+
+102
+00:09:12,800 --> 00:09:13,990
+parte inferior.
+
+103
+00:09:14,000 --> 00:09:19,360
+Dan chamou isso de cancelar o SEP de carregamento.
+
+104
+00:09:19,680 --> 00:09:25,280
+E com isso podemos ir para o Templi do componente de inscrio e usar essa nova como propriedade de carregamento.
+
+105
+00:09:25,460 --> 00:09:33,780
+Voc s mostra o boto se no estiver carregando e, caso contrrio, mostrar o spinner matemtico.
+
+106
+00:09:34,190 --> 00:09:37,700
+E aqui, portanto, ns adicionamos NGF est carregando.
+
+107
+00:09:37,850 --> 00:09:40,490
+Ento, agora para inscrio, tambm devemos ver um spinner.
+
+108
+00:09:40,670 --> 00:09:42,790
+Vamos ver isso tambm em ao.
+
+109
+00:09:43,040 --> 00:09:51,380
+Para os dados eu preciso sair primeiro e ir para a pgina de inscrio e eu digite as credenciais erradas aqui e e-mail que j
+
+110
+00:09:51,380 --> 00:09:52,300
+est sendo usado.
+
+111
+00:09:52,310 --> 00:09:54,910
+Mas eu ainda devo ver o spinner e eu fao.
+
+112
+00:09:54,950 --> 00:09:58,820
+E tambm desaparece no caso da Seta que deveria mostr-lo.
+
+113
+00:09:58,970 --> 00:10:00,650
+Ento estamos quase l.
+
+114
+00:10:00,650 --> 00:10:02,370
+Uma coisa que quero fazer agora.
+
+115
+00:10:02,570 --> 00:10:04,320
+Eu tambm quero adicionar um spinner.
+
+116
+00:10:04,490 --> 00:10:10,370
+Se estiver logado e aguardando o carregamento dos exerccios aqui, no quero mostrar o menu suspenso e o
+
+117
+00:10:10,370 --> 00:10:12,580
+boto, a menos que haja um atordoamento.
+
+118
+00:10:12,740 --> 00:10:14,700
+Este  um timo exerccio para voc.
+
+119
+00:10:14,690 --> 00:10:21,560
+Agora  um pouco diferente porque no usamos a autenticao firebase, mas firestorm firebase.
+
+120
+00:10:21,680 --> 00:10:23,870
+Mas o padro deve ser o mesmo.
+
+121
+00:10:23,870 --> 00:10:26,440
+Ento este  o prximo divisor atribuvel.
+

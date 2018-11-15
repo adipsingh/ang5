@@ -1,0 +1,40 @@
+1
+00:00:02,350 --> 00:00:05,080
+At agora, j conseguimos muito.
+
+2
+00:00:05,080 --> 00:00:09,700
+E nosso aplicativo j est com boa aparncia e funcionando muito bem.
+
+3
+00:00:09,880 --> 00:00:17,470
+Ainda h coisas que podemos polir, podemos otimizar tanto a partir de nossa tica, como de
+
+4
+00:00:17,470 --> 00:00:20,800
+uma perspectiva tcnica de uma perspectiva ptica.
+
+5
+00:00:20,800 --> 00:00:27,510
+Poderamos, por exemplo, adicionar um melhor tratamento de erros, especialmente durante a autenticao, e talvez tambm mostrar a
+
+6
+00:00:27,520 --> 00:00:29,820
+alguns spinners algum indicador de carregamento.
+
+7
+00:00:29,830 --> 00:00:38,290
+Enquanto nos afiliamos e de uma perspectiva tcnica, podemos dividir nosso mdulo de aplicativo em mdulos adicionais para
+
+8
+00:00:38,290 --> 00:00:44,760
+que ele fique menos lotado e implemente o carregamento lento da parte de treinamento.
+
+9
+00:00:44,770 --> 00:00:47,380
+Estas so as coisas que vou abordar neste mdulo.
+
+10
+00:00:47,380 --> 00:00:48,530
+Ento vamos mergulhar direto.
+

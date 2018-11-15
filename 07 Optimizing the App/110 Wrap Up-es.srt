@@ -1,0 +1,100 @@
+1
+00:00:02,370 --> 00:00:08,760
+Por lo tanto, en este modelo implementamos muchos cambios y mejoras en nuestra estructura de cdigo y todo lo
+
+2
+00:00:08,890 --> 00:00:11,820
+que conduzca al manejo de errores y dems.
+
+3
+00:00:11,880 --> 00:00:18,570
+Ahora hagamos una ejecucin de prueba para que la implementacin no se implemente todava, pero quiero ver si funcionara si
+
+4
+00:00:18,570 --> 00:00:20,110
+la construyo para produccin.
+
+5
+00:00:20,310 --> 00:00:29,070
+As como con el servidor Def y luego ejecutar el fraude Enry build dash dash para ambos para la produccin, que
+
+6
+00:00:29,070 --> 00:00:36,510
+tambin utilizar la compilacin previa, lo que significa que todo el ngulo o las plantillas ya estn optimizados
+
+7
+00:00:36,810 --> 00:00:38,410
+y compilados ahora.
+
+8
+00:00:38,550 --> 00:00:44,490
+De modo que en el navegador se deben volver a hacer las toallitas y, por lo tanto, el ngulo comienza ms rpido.
+
+9
+00:00:44,520 --> 00:00:51,150
+As que hacemos esto ejecutando Engy build dash dash Pre-OT y esto ahora optimizar nuestro cdigo eliminando cdigo
+
+10
+00:00:51,150 --> 00:00:55,030
+innecesario y realmente nos dar un buen paquete que podemos implementar.
+
+11
+00:00:55,350 --> 00:00:56,960
+Y danos un error.
+
+12
+00:00:57,180 --> 00:00:59,530
+Es por eso que quera hacer esta prueba.
+
+13
+00:00:59,640 --> 00:01:02,140
+El error proviene de nuestro archivo de entornos.
+
+14
+00:01:02,160 --> 00:01:07,590
+El problema es que no podemos inicializar Firebase para nuestra compilacin de produccin porque estamos
+
+15
+00:01:07,590 --> 00:01:15,930
+haciendo esto en el entorno o en el archivo TS, pero la clave firebase de Derrida solo est disponible en nuestro entorno de
+
+16
+00:01:15,930 --> 00:01:18,610
+desarrollo de pozos para la variedad de produccin.
+
+17
+00:01:18,630 --> 00:01:22,150
+Deberamos en la misma configuracin para nuestro medio ambiente.
+
+18
+00:01:22,210 --> 00:01:25,230
+Perrott ese archivo de TS como este.
+
+19
+00:01:25,500 --> 00:01:31,920
+Si hacemos esto y volvemos a ejecutar el comando, hoy en realidad termin el proceso de compilacin con xito y este
+
+20
+00:01:31,920 --> 00:01:37,580
+es un paso importante que tiene que hacer para asegurarse de que su aplicacin funcione ms tarde correctamente.
+
+21
+00:01:37,620 --> 00:01:39,860
+Una vez que lo ejecutas en un servidor real.
+
+22
+00:01:40,020 --> 00:01:44,250
+As que no esperemos a que termine y veamos si tenemos otros errores.
+
+23
+00:01:44,430 --> 00:01:50,180
+El proceso de compilacin termin con xito y con eso deberamos guardarlo para luego implementarlo.
+
+24
+00:01:50,190 --> 00:01:53,960
+Con eso estoy contento con todas las optimizaciones que implementamos.
+
+25
+00:01:53,970 --> 00:01:55,800
+Veamos qu ms podemos hacer con nuestra aplicacin.
+

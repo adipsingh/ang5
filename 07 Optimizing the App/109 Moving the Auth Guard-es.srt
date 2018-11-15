@@ -1,0 +1,136 @@
+1
+00:00:02,230 --> 00:00:06,750
+Con la carga lenta me gustara ir a mi mdulo de enrutamiento de entrenamiento.
+
+2
+00:00:06,850 --> 00:00:13,750
+Por lo tanto, retrasos en el mdulo de enrutamiento cargado y eliminar a los desprevenidos de aqu porque si lo usamos
+
+3
+00:00:13,750 --> 00:00:17,550
+aqu tenemos una desventaja si los usamos realmente pueden esperar aqu.
+
+4
+00:00:17,740 --> 00:00:25,180
+Comprobamos si se nos permite ingresar a este componente, es un componente de capacitacin despus de
+
+5
+00:00:25,180 --> 00:00:26,860
+cargar el mdulo completo.
+
+6
+00:00:26,950 --> 00:00:30,870
+Ahora podemos simplemente guardar eso y no descargar el mdulo.
+
+7
+00:00:30,940 --> 00:00:37,540
+Si no tenemos acceso de todos modos, entonces es por eso que consultarlo aqu es demasiado tarde para tener una aplicacin ptima
+
+8
+00:00:37,540 --> 00:00:38,270
+al menos.
+
+9
+00:00:38,500 --> 00:00:39,950
+As que voy a eliminar a los desprevenidos.
+
+10
+00:00:39,950 --> 00:00:46,800
+Importante puede activar la tecla aqu en el mdulo de enrutamiento de desentrenamiento e ir al mdulo de enrutamiento de la aplicacin.
+
+11
+00:00:46,960 --> 00:00:54,570
+Y aqu en esta ruta en esta ruta de carga lenta hay una propiedad especial que puede cargarse y que podemos agregar.
+
+12
+00:00:54,610 --> 00:00:59,950
+Funciona como puede activarse pero se ejecuta antes de que se cargue el paquete.
+
+13
+00:01:00,190 --> 00:01:08,950
+As que aqu estoy desprevenido y para que esto funcione tengo que ir a mi archivo no
+
+14
+00:01:08,950 --> 00:01:15,240
+protegido ahora aqu y realmente implementar la interfaz de carga de lata.
+
+15
+00:01:15,500 --> 00:01:19,600
+Se importa de enrutadores angulares ET, as que djame agregar.
+
+16
+00:01:19,610 --> 00:01:20,990
+Puede cargar aqu
+
+17
+00:01:21,280 --> 00:01:26,810
+Ahora tengo que agregar que se puede cargar aqu y que la carga se ve casi como una conexin, as que puedo copiar
+
+18
+00:01:26,810 --> 00:01:27,430
+todo el cdigo.
+
+19
+00:01:27,570 --> 00:01:28,330
+Las diferencias.
+
+20
+00:01:28,340 --> 00:01:32,050
+No tiene ese segundo argumento solo el primero.
+
+21
+00:01:32,150 --> 00:01:38,500
+Guardamos esto, obtenemos un error porque el primero tiene un tipo diferente, es de tipo ruta,
+
+22
+00:01:38,500 --> 00:01:40,620
+y debemos importarlo desde el enrutador.
+
+23
+00:01:40,660 --> 00:01:43,970
+As que solo la ruta como esta.
+
+24
+00:01:44,020 --> 00:01:49,530
+Ahora con eso compila con xito y ahora tenemos los mismos controles.
+
+25
+00:01:49,530 --> 00:01:54,770
+Tenemos el mismo control y ambos mtodos que no estamos utilizando pueden activarse ms o podemos eliminarlo.
+
+26
+00:01:54,780 --> 00:01:56,920
+Pero lo dejo aqu por completo.
+
+27
+00:01:57,060 --> 00:02:03,090
+Pero ahora podemos cargar y agregamos esto en la bandeja disclpeme en el mdulo de enrutamiento de la aplicacin.
+
+28
+00:02:03,090 --> 00:02:11,160
+As que ahora estamos verificando esto si tenemos acceso a esta ruta, an est antes de que salgamos antes de
+
+29
+00:02:11,160 --> 00:02:11,740
+ingresar.
+
+30
+00:02:11,790 --> 00:02:13,880
+Pero tambin antes de cargar el paquete.
+
+31
+00:02:14,160 --> 00:02:21,120
+Por lo tanto, si cierro la sesin todava no puedo acceder al entrenamiento de barra, ya que puedo probar que si intento
+
+32
+00:02:21,810 --> 00:02:26,040
+hacerlo manualmente, sigo siendo un redirector para iniciar sesin y todava funciona al revs.
+
+33
+00:02:26,040 --> 00:02:32,810
+Si inicio sesin pero detrs de las escenas, ahora solo se cargar el paquete de capacitacin.
+
+34
+00:02:32,880 --> 00:02:35,220
+Si realmente estamos autorizados a entrar en esto.
+

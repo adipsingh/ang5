@@ -1,0 +1,100 @@
+1
+00:00:02,370 --> 00:00:08,760
+Assim, neste modelo, implementamos muitas mudanas e melhorias em nossa estrutura de cdigo, e tudo isso levar
+
+2
+00:00:08,890 --> 00:00:11,820
+ao tratamento de erros e assim por diante.
+
+3
+00:00:11,880 --> 00:00:18,570
+Agora vamos fazer uma execuo de teste para implantao ainda no implantada, mas eu quero ver se funcionaria se
+
+4
+00:00:18,570 --> 00:00:20,110
+eu constru-lo para produo.
+
+5
+00:00:20,310 --> 00:00:29,070
+Ento, como com o Def Server e, em seguida, ser executado Engy construir trao fraude trao para ambos para a produo que
+
+6
+00:00:29,070 --> 00:00:36,510
+tambm ir usar a compilao antes do tempo, o que significa que todo o ngulo ou modelos j esto
+
+7
+00:00:36,810 --> 00:00:38,410
+otimizados e compilados agora.
+
+8
+00:00:38,550 --> 00:00:44,490
+De modo que no dishtowels do navegador tem que ser feito de novo e, portanto, o ngulo comea mais rpido.
+
+9
+00:00:44,520 --> 00:00:51,150
+Ento, fazemos isso executando Engy build dash dash Pre-OT e isso agora otimizar nosso cdigo para remover cdigo
+
+10
+00:00:51,150 --> 00:00:55,030
+desnecessrio e realmente nos dar um bom pacote que podemos implementar.
+
+11
+00:00:55,350 --> 00:00:56,960
+E nos d um erro.
+
+12
+00:00:57,180 --> 00:00:59,530
+ por isso que eu queria fazer este teste.
+
+13
+00:00:59,640 --> 00:01:02,140
+O erro est vindo do nosso arquivo de ambientes.
+
+14
+00:01:02,160 --> 00:01:07,590
+O problema  que no podemos inicializar o Firebase para nossa criao de produo porque
+
+15
+00:01:07,590 --> 00:01:15,930
+estamos fazendo isso no ambiente ou no arquivo TS, mas a chave firebase do Derrida est disponvel apenas em nosso ambiente de desenvolvimento
+
+16
+00:01:15,930 --> 00:01:18,610
+de poos para o intervalo de produo.
+
+17
+00:01:18,630 --> 00:01:22,150
+Devemos ao mesmo configurar para o nosso meio ambiente.
+
+18
+00:01:22,210 --> 00:01:25,230
+Perrott que TS arquivo como este.
+
+19
+00:01:25,500 --> 00:01:31,920
+Se fizermos isso e executarmos novamente o comando, ele concluiu o processo de construo com xito e essa 
+
+20
+00:01:31,920 --> 00:01:37,580
+uma etapa importante que voc precisa fazer para garantir que o aplicativo funcione corretamente mais tarde.
+
+21
+00:01:37,620 --> 00:01:39,860
+Depois de execut-lo em um servidor real.
+
+22
+00:01:40,020 --> 00:01:44,250
+Ento, no vamos esperar que isso termine e veja se temos algum outro erro.
+
+23
+00:01:44,430 --> 00:01:50,180
+O processo de construo foi concludo com sucesso e, com isso, devemos salv-lo posteriormente.
+
+24
+00:01:50,190 --> 00:01:53,960
+Com isso, estou feliz com todas as otimizaes que colocamos em prtica.
+
+25
+00:01:53,970 --> 00:01:55,800
+Vamos ver o que mais podemos fazer com nosso aplicativo.
+

@@ -1,0 +1,128 @@
+1
+00:00:02,260 --> 00:00:10,150
+As que implementamos la funcionalidad de descarga y lo estamos controlando por completo a travs de nuestro servicio de OJO.
+
+2
+00:00:10,210 --> 00:00:16,870
+Ahora tenemos otro elemento de UI que implementamos hace solo unos minutos si tenemos un vistazo a la pantalla
+
+3
+00:00:16,870 --> 00:00:18,410
+de inicio de sesin.
+
+4
+00:00:18,760 --> 00:00:26,240
+Qu pasa con este snack bar que estamos atendiendo en el servicio no estaba mostrando este snack bar un mensaje de
+
+5
+00:00:26,240 --> 00:00:27,920
+refrescos en la parte inferior.
+
+6
+00:00:28,000 --> 00:00:29,880
+Cada vez que recibimos un error.
+
+7
+00:00:29,980 --> 00:00:35,320
+No, en realidad, este es un elemento de UI que tambin podramos necesitar de otros lugares en la aplicacin.
+
+8
+00:00:35,350 --> 00:00:43,180
+Por lo tanto, una buena mejora de la aplicacin es agregar un mtodo a todo
+
+9
+00:00:43,180 --> 00:00:51,770
+su Servicio de hielo, que podemos llamar una cafetera con un mensaje, una accin y una duracin.
+
+10
+00:00:52,060 --> 00:00:54,960
+Y donde ahora usamos esa cafetera en su lugar.
+
+11
+00:00:55,250 --> 00:01:02,150
+As que ahora agregar un inyectable al servicio de la deuda que se importa de Anglo COOREY para que podamos inyectar el
+
+12
+00:01:02,150 --> 00:01:09,370
+servicio de barra de bocadillo de pap Matt que inyectar agregando una barra de bocadillos en el constructor que es de tipo.
+
+13
+00:01:09,400 --> 00:01:09,840
+Mate.
+
+14
+00:01:09,840 --> 00:01:14,000
+Snack Bar que debe importarse del material angular ET.
+
+15
+00:01:15,250 --> 00:01:23,800
+Y ahora podemos simplemente llamar a este snack bar abierto y pasar el mensaje a la accin.
+
+16
+00:01:24,110 --> 00:01:32,660
+Y tambin mi conflicto aqu como argumento no es mi conflicto sino un objeto donde establezco la duracin del argumento de
+
+17
+00:01:32,660 --> 00:01:37,640
+duracin que estoy obteniendo aqu como el primer argumento de este mtodo.
+
+18
+00:01:38,000 --> 00:01:43,740
+Ahora tenemos ese mtodo de barra de bocadillos reutilizable que podemos usar desde dentro del servicio fuera de servicio.
+
+19
+00:01:43,820 --> 00:01:49,580
+Ah ya le estamos inyectando Ice Service, as que podemos ir a todas las instancias en las que
+
+20
+00:01:49,670 --> 00:01:57,050
+usemos este snack bar abierto, que son estas dos que se registran e inician sesin y all en lugar de llamar a este
+
+21
+00:01:57,050 --> 00:01:58,320
+snack bar abierto.
+
+22
+00:01:58,340 --> 00:02:06,470
+Ahora voy a llamar a este tu mostrador de servicio de snack bar donde mi mensaje es solo el mensaje de error
+
+23
+00:02:06,470 --> 00:02:11,200
+donde la accin sigue siendo nula y con duraciones de 3000 como muertos.
+
+24
+00:02:11,510 --> 00:02:17,770
+Y luego, puedo quitar este snack bar abierto del Servicio de hielo, en realidad eres del oficial de
+
+25
+00:02:17,780 --> 00:02:23,290
+este ao del usuario de registro Meffert y para iniciar sesin es el mismo mtodo.
+
+26
+00:02:23,510 --> 00:02:29,630
+Un servicio muestra una cafetera con el mensaje de error nulo como una accin y tres segundos.
+
+27
+00:02:30,080 --> 00:02:35,600
+Y ahora puedo eliminar la inyeccin de la cafetera de Matt de este servicio.
+
+28
+00:02:35,630 --> 00:02:40,790
+As que esto es ahora una pequea mejora que asegura el staed en nuestra aplicacin.
+
+29
+00:02:40,790 --> 00:02:47,100
+Si cierro la sesin, sigo recibiendo mi error o un snack bar en la parte inferior si falla.
+
+30
+00:02:47,300 --> 00:02:53,390
+Pero ahora tambin estamos controlando esto en un lugar central, lo que lo hace ms reutilizable y ahorra la
+
+31
+00:02:53,390 --> 00:02:58,130
+molestia de inyectar una barra de refrigerios en todos los lugares donde queremos usarlo.
+
+32
+00:02:58,130 --> 00:03:03,880
+Esto tambin nos permite mejorar el manejo de errores de otras partes de la aplicacin.
+

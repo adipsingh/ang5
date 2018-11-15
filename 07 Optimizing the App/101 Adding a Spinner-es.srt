@@ -1,0 +1,484 @@
+1
+00:00:02,170 --> 00:00:07,120
+As que en la ltima conferencia agregamos el manejo de errores y mostramos un mejor mensaje de error.
+
+2
+00:00:07,120 --> 00:00:11,150
+Ahora tambin quiero mostrar un spinner mientras esperamos el inicio de sesin.
+
+3
+00:00:11,230 --> 00:00:14,480
+Y, adems, una vez que estamos encerrados.
+
+4
+00:00:14,710 --> 00:00:21,760
+Tambin quiero mostrar un poco de spinner cuando estamos en la nueva pgina de ejercicios porque las opciones
+
+5
+00:00:21,760 --> 00:00:25,570
+disponibles cargan muy rpido pero no estn al instante.
+
+6
+00:00:25,570 --> 00:00:28,700
+As que esto es algo que tambin quiero asegurarme.
+
+7
+00:00:28,750 --> 00:00:29,930
+Eso es posible.
+
+8
+00:00:30,720 --> 00:00:34,880
+Para lograr esto, podemos buscar un componente apropiado y el reto.
+
+9
+00:00:34,940 --> 00:00:39,590
+Un spinner de progreso o una barra de progreso tiene ms sentido.
+
+10
+00:00:39,600 --> 00:00:45,810
+Ahora, una barra de progreso puede no ser ideal aqu porque una barra de progreso indica que
+
+11
+00:00:45,810 --> 00:00:48,950
+estamos enviando grandes cantidades de datos en cualquier direccin.
+
+12
+00:00:49,140 --> 00:00:56,730
+Por lo tanto, un analizador de progreso es lo que se ve ms a menudo en este tipo de situaciones para los inicios de sesin, y
+
+13
+00:00:56,730 --> 00:00:57,250
+as sucesivamente.
+
+14
+00:00:57,420 --> 00:01:05,120
+Entonces, queremos tener un spinner y ahora queremos tener un spinner indeterminado si quieres
+
+15
+00:01:05,120 --> 00:01:06,980
+tener un spinner indeterminado.
+
+16
+00:01:06,980 --> 00:01:13,880
+Podras usar la rueda giratoria de progreso del mapa que ya usamos y establecer el modo indeterminado o usar
+
+17
+00:01:13,880 --> 00:01:19,310
+el giradiscos de la estera corta, que es simplemente lo que ves aqu solo eso.
+
+18
+00:01:19,460 --> 00:01:24,140
+Entonces, queremos mostrar este spinner mientras esperamos el inicio de sesin.
+
+19
+00:01:24,620 --> 00:01:30,290
+Y eso significa que en el componente de inicio de sesin aqu queremos mostrarlo digamos en lugar del
+
+20
+00:01:30,710 --> 00:01:34,460
+botn, por lo que podramos, por supuesto, agregar este mat spinner all.
+
+21
+00:01:34,460 --> 00:01:40,000
+Permtanme agregarlo aqu y luego volver a nuestra aplicacin y cerrar la sesin.
+
+22
+00:01:40,220 --> 00:01:42,780
+Ahora siempre vemos esto mejor aqu.
+
+23
+00:01:43,190 --> 00:01:45,440
+Entonces tenemos esa ruleta debajo del botn.
+
+24
+00:01:45,500 --> 00:01:49,600
+No quiero tener una gran carga, pero quiero tenerla en lugar del botn, por supuesto.
+
+25
+00:01:49,880 --> 00:01:55,960
+Entonces, necesitamos usar NGF para controlar si mostramos un botn o un spinner.
+
+26
+00:01:56,060 --> 00:02:01,580
+La pregunta es cul es nuestra condicin y la condicin est muerta.
+
+27
+00:02:01,640 --> 00:02:09,830
+Nos enviamos al formulario pero an no hemos recibido una respuesta, as que tenemos que gestionar eso en el servicio fuera
+
+28
+00:02:10,390 --> 00:02:11,100
+de all.
+
+29
+00:02:11,120 --> 00:02:19,880
+Llamamos a nuestro mtodo de registro y comenzamos este proceso de registro y hemos terminado una vez que alcanzamos esto o atrapamos el bloque
+
+30
+00:02:19,880 --> 00:02:25,640
+porque en el bloque catch tenemos un error, pero el envo todava est hecho y queremos
+
+31
+00:02:25,640 --> 00:02:31,490
+comenzar justo antes de ejecutar inicie sesin aqu con IIM-A y el mtodo de contrasea.
+
+32
+00:02:31,520 --> 00:02:37,820
+Entonces, lo que necesito es un emisor de eventos adicional que me permita controlar la visualizacin de
+
+33
+00:02:37,820 --> 00:02:43,120
+un divisor y no controlar ni crear ninguna materia en el fuera de servicio.
+
+34
+00:02:43,280 --> 00:02:49,940
+En su lugar, quiero crear una nueva carpeta compartida y una carpeta yp, y en esa carpeta compartida creo todo
+
+35
+00:02:50,110 --> 00:02:51,930
+lo que creas, pens Service Dot.
+
+36
+00:02:51,950 --> 00:02:54,860
+S, archivo y, por supuesto, puede nombrarlo de manera diferente.
+
+37
+00:02:54,860 --> 00:03:00,980
+Lo llamo as porque controla las funcionalidades de IU globales y solo
+
+38
+00:03:00,980 --> 00:03:11,410
+exportan una clase que tiene el nombre de servicio de IU y esa clase simplemente tendr mi emisor de eventos.
+
+39
+00:03:11,410 --> 00:03:26,450
+Por lo tanto, all importar el tema de nuestro SJS y crear aqu mi escucha de eventos modificados de estado de carga, que es un tema
+
+40
+00:03:26,710 --> 00:03:34,490
+nuevo que envuelve un booleano triplicado independientemente de si la carga comenz o termin.
+
+41
+00:03:34,490 --> 00:03:41,430
+Digamos que ahora con ese servicio creado uno proporcionado en el mdulo.
+
+42
+00:03:41,480 --> 00:03:47,000
+As que ir all y en el arreglo del proveedor admiro su servicio de hielo para pap.
+
+43
+00:03:47,000 --> 00:03:52,490
+Tambin tenemos que agregar una importacin en la parte superior que apunta a la carpeta compartida y, a
+
+44
+00:03:53,320 --> 00:04:01,280
+continuacin, o bien el servicio de archivo con el servicio proporcionado, podemos volver al servicio fuera de servicio y ahora simplemente utilizar ese estado de carga.
+
+45
+00:04:01,290 --> 00:04:04,580
+Cambi a Lisner para que no fuera el servicio.
+
+46
+00:04:04,620 --> 00:04:11,750
+Primero, inyecta el servicio DeWyze, nelo a una propiedad que se llame un servicio, tal vez escriba su tipo de
+
+47
+00:04:11,750 --> 00:04:17,960
+servicio y, por supuesto, para pap, todos debemos agregar un servicio de importacin de importacin desde la carpeta
+
+48
+00:04:17,960 --> 00:04:25,060
+compartida y luego el servicio IDdylls y ahora podemos usar eso. servicio en el registro en el mtodo de registro.
+
+49
+00:04:25,130 --> 00:04:31,250
+As que aqu en el inicio de sesin nuestro alcance al servicio de hielo y voy a llamar al
+
+50
+00:04:31,280 --> 00:04:39,240
+siguiente mtodo en el estado de carga tema cambiado todo configurado en verdadero para indicar que comenzamos a cargar y tambin emitir un evento
+
+51
+00:04:39,240 --> 00:04:42,690
+una vez que hayamos terminado aqu fuera de dos cadas
+
+52
+00:04:42,690 --> 00:04:49,830
+Y como dije, tambin voy a hacer lo mismo y atrapar el bloqueo porque fallamos, pero aun as tuvimos
+
+53
+00:04:49,830 --> 00:04:51,680
+xito al enviar su solicitud.
+
+54
+00:04:51,750 --> 00:04:57,570
+As que tenemos que quitar la astilla y mostrar el botn de nuevo y lo mismo para registrarse aqu.
+
+55
+00:04:57,570 --> 00:05:00,980
+Tambin comenzar estableciendo esto en verdadero.
+
+56
+00:05:01,230 --> 00:05:09,420
+Y luego, y luego bloqueando, quiero detener todo y establecer el estado de carga en falso.
+
+57
+00:05:09,510 --> 00:05:16,020
+Con eso, ahora podemos suscribirnos a ese oyente cambiado de estado de carga y queremos hacerlo en el
+
+58
+00:05:16,020 --> 00:05:17,800
+componente de inicio de sesin.
+
+59
+00:05:17,820 --> 00:05:25,630
+As que aqu estn ULS y el servicio de DeWyze comprobado y lo vinculan a una propiedad llamada servicio para el tero de pap.
+
+60
+00:05:25,630 --> 00:05:27,740
+Todos necesitamos agregar la importacin, por supuesto.
+
+61
+00:05:27,760 --> 00:05:33,910
+Por lo tanto, cuando inicia sesin en el componente que se mueve a la carpeta compartida e importa desde el
+
+62
+00:05:34,210 --> 00:05:36,270
+archivo del usuario inyectndolo en el constructor.
+
+63
+00:05:36,520 --> 00:05:44,950
+Y con ese objeto que podemos agregar, se est cargando una nueva propiedad que inicialmente es falsa y que ahora cambiamos cada
+
+64
+00:05:44,950 --> 00:05:48,250
+vez que obtenemos un nuevo estado de carga.
+
+65
+00:05:48,250 --> 00:05:55,000
+Por lo tanto, me suscribir a este emisor de evento cambiado de estado de carga y eso significa que debo
+
+66
+00:05:55,050 --> 00:05:56,110
+almacenar la suscripcin.
+
+67
+00:05:56,110 --> 00:06:05,650
+As que importar la suscripcin desde nuestro intercambio S y crear una nueva propiedad privada en la parte
+
+68
+00:06:06,010 --> 00:06:13,300
+superior que nombrar la carga de Suppes que es solo de tipo suscripcin.
+
+69
+00:06:13,480 --> 00:06:16,240
+Ahora, una entrada en un anuncio, podemos configurar una suscripcin.
+
+70
+00:06:16,240 --> 00:06:24,370
+Puedo enlazar a mis Suppes de carga y encuentro este servicio de UI cargando estado cambiado de suscriptor que se activar cada
+
+71
+00:06:24,550 --> 00:06:31,180
+vez que activemos el estado de descarga cambiado, ya que lo hacemos en el servicio fuera de all
+
+72
+00:06:31,230 --> 00:06:35,860
+obtengo est cargando estado tambin lo hace Boullion, que es verdadero o falso.
+
+73
+00:06:36,250 --> 00:06:38,420
+Y quiero establecer que esto se est cargando.
+
+74
+00:06:38,620 --> 00:06:45,190
+As que esta propiedad que cre hace un segundo al valor de su carga de valor de Sotoudeh
+
+75
+00:06:45,190 --> 00:06:47,140
+estaba emitiendo con el sujeto.
+
+76
+00:06:47,140 --> 00:06:50,850
+Y, por supuesto, tenemos que darse de baja en ngi en el stroy.
+
+77
+00:06:50,890 --> 00:06:53,430
+As que implementemos en destruido.
+
+78
+00:06:53,530 --> 00:07:03,830
+Asegrese tambin de agregar una importacin que proviene de coordenadas angulares e implementar la energa en el mtodo stroy, por lo
+
+79
+00:07:03,830 --> 00:07:10,970
+tanto, ONG y destruirlas. Llego a mi suscripcin de cargas y llamo a cancelar la
+
+80
+00:07:11,110 --> 00:07:14,350
+suscripcin para evitar fugas de memoria.
+
+81
+00:07:14,540 --> 00:07:22,010
+Con eso conseguimos nuestro conjunto de estado de carga y ahora podemos usarlo en la plantilla del componente de carga.
+
+82
+00:07:22,010 --> 00:07:29,120
+Y finalmente podemos enlazar el botn con NGF para que no se cargue para mostrarlo solo mientras no estamos
+
+83
+00:07:29,120 --> 00:07:34,520
+cargando y el spinner en el aberant se debe mostrar cada vez que estamos cargando.
+
+84
+00:07:34,520 --> 00:07:36,500
+Entonces cuando est cargando es verdad.
+
+85
+00:07:36,830 --> 00:07:39,380
+Y con eso veamos una accin para la pantalla de inicio de sesin.
+
+86
+00:07:39,500 --> 00:07:41,540
+Volvamos a nuestra aplicacin.
+
+87
+00:07:41,540 --> 00:07:43,040
+Ingresemos las credenciales.
+
+88
+00:07:43,280 --> 00:07:47,240
+Y ahora tendrs que mirar de cerca porque el fuego es realmente rpido.
+
+89
+00:07:47,240 --> 00:07:50,710
+Pero durante un corto perodo de tiempo, ver el spinner.
+
+90
+00:07:50,870 --> 00:07:56,540
+Ahora hagamos lo mismo para la pgina de registro y simplemente repetir todo el patrn all.
+
+91
+00:07:56,570 --> 00:07:58,230
+El componente de registro.
+
+92
+00:07:58,280 --> 00:08:08,340
+En primer lugar, inyecte su servicio y, por lo tanto, su cola, necesitamos agregar la importacin al Servicio de United.
+
+93
+00:08:08,900 --> 00:08:11,340
+Y planeo almacenar una suscripcin.
+
+94
+00:08:11,360 --> 00:08:19,490
+As que voy a importar la suscripcin desde nuestro intercambio S, tambin aqu dos y luego agregar dos propiedades que estn
+
+95
+00:08:19,490 --> 00:08:22,390
+cargando, que es falso y una propiedad privada.
+
+96
+00:08:22,460 --> 00:08:31,940
+Mi suscripcin de carga, que es de suscripcin de tipo y luego una entrada, asigna rpidamente mi suscripcin de carga. La
+
+97
+00:08:32,030 --> 00:08:38,720
+suscripcin 2D que obtengo del sujeto de estado flotante en el servicio de hielo donde
+
+98
+00:08:39,750 --> 00:08:48,060
+tambin obtengo carga booleana y donde se carga una densidad propiedad de ese componente por lo que aqu
+
+99
+00:08:48,060 --> 00:08:56,930
+hasta el valor del emitido est cargando Boullion y ahora, por supuesto, tambin implemente en la destruccin de este
+
+100
+00:08:56,960 --> 00:09:02,110
+mtodo para evitar prdidas de memoria de mi suscripcin de carga.
+
+101
+00:09:02,300 --> 00:09:12,500
+As que para eso tambin tenemos que importar en el stroy desde un ncleo angular e implementar DNG en el mtodo de destruccin en
+
+102
+00:09:12,800 --> 00:09:13,990
+la parte inferior.
+
+103
+00:09:14,000 --> 00:09:19,360
+Dan llam a este SEP de carga para darse de baja.
+
+104
+00:09:19,680 --> 00:09:25,280
+Y con eso podemos ir al Templi del componente de registro y usar esa nueva propiedad de carga.
+
+105
+00:09:25,460 --> 00:09:33,780
+Solo muestra el botn si no est cargando y si no muestra el spinner matemtico.
+
+106
+00:09:34,190 --> 00:09:37,700
+Y aqu, por lo tanto, agregamos que NGF se est cargando.
+
+107
+00:09:37,850 --> 00:09:40,490
+As que ahora para Registrarse tambin deberamos ver un spinner.
+
+108
+00:09:40,670 --> 00:09:42,790
+Veamos esto en accin.
+
+109
+00:09:43,040 --> 00:09:51,380
+Para los datos, necesito cerrar la sesin primero e ir a la pgina de registro e ingresar las credenciales incorrectas aqu y el correo electrnico que
+
+110
+00:09:51,380 --> 00:09:52,300
+ya est utilizado.
+
+111
+00:09:52,310 --> 00:09:54,910
+Pero an debera ver el spinner y lo hago.
+
+112
+00:09:54,950 --> 00:09:58,820
+Y tambin desaparece en el caso de Arrow, que debera mostrarlo.
+
+113
+00:09:58,970 --> 00:10:00,650
+As que estamos casi all.
+
+114
+00:10:00,650 --> 00:10:02,370
+Una cosa que quiero hacer ahora.
+
+115
+00:10:02,570 --> 00:10:04,320
+Tambin quiero agregar un spinner.
+
+116
+00:10:04,490 --> 00:10:10,370
+Si estamos conectados y esperando que los ejercicios se carguen aqu, no quiero mostrar el men desplegable y el
+
+117
+00:10:10,370 --> 00:10:12,580
+botn a menos que haya un aturdimiento.
+
+118
+00:10:12,740 --> 00:10:14,700
+Este es un gran ejercicio para ti.
+
+119
+00:10:14,690 --> 00:10:21,560
+Ahora es un poco diferente porque no usamos la autenticacin de Firebase, sino Firesta Firem.
+
+120
+00:10:21,680 --> 00:10:23,870
+Pero el patrn debera ser el mismo.
+
+121
+00:10:23,870 --> 00:10:26,440
+As que esta es la prxima inmersin asignable.
+

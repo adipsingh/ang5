@@ -1,0 +1,268 @@
+1
+00:00:02,230 --> 00:00:09,730
+Tambin podemos mejorar el manejo de errores en los componentes de capacitacin en una nueva capacitacin o especficamente en
+
+2
+00:00:09,730 --> 00:00:13,530
+el servicio de capacitacin donde buscamos todos los ejercicios disponibles.
+
+3
+00:00:13,630 --> 00:00:15,720
+No estamos manejando flechas en este momento.
+
+4
+00:00:15,710 --> 00:00:18,190
+Ahora bien, tendra sentido manejar los errores.
+
+5
+00:00:18,280 --> 00:00:22,100
+Y qu queremos hacer si falla este mtodo especfico.
+
+6
+00:00:22,120 --> 00:00:29,500
+Entonces, si no podemos obtener las acciones de los ejercicios que el usuario quiere hacer bien, podramos, por ejemplo, mostrar una
+
+7
+00:00:29,500 --> 00:00:32,980
+cafetera en la que al menos le informemos al usuario.
+
+8
+00:00:33,070 --> 00:00:39,280
+Entonces, aqu despus de la primera funcin que pasamos para suscribir, podemos pasar una segunda funcin que se
+
+9
+00:00:39,280 --> 00:00:41,490
+activar para todas las flechas que obtengamos.
+
+10
+00:00:41,890 --> 00:00:47,680
+Y aqu, en esa funcin, quiero usar el servicio de hielo que ya
+
+11
+00:00:47,770 --> 00:00:59,080
+estamos inyectando en el servicio de desentrenamiento y quiero llamar a una cafetera con un mensaje donde podra decir que los ejercicios de bsqueda fallaron.
+
+12
+00:00:59,110 --> 00:01:01,530
+Por favor, intntelo de nuevo ms tarde.
+
+13
+00:01:03,260 --> 00:01:08,240
+Donde no tengo una accin y espero todo el show por tres segundos.
+
+14
+00:01:08,240 --> 00:01:14,050
+Ahora tenemos ese controlador de errores en su lugar ahora para verlo tambin en accin.
+
+15
+00:01:14,210 --> 00:01:24,950
+Lo que har es que simplemente no devolver temporalmente mi matriz no transformada, sino que simplemente aparecer
+
+16
+00:01:24,950 --> 00:01:31,110
+un nuevo error aqu en la funcin de mapa.
+
+17
+00:01:31,160 --> 00:01:34,420
+Ahora esto debera llevar a que se active el mtodo de error.
+
+18
+00:01:34,580 --> 00:01:36,860
+Entonces, si ingresamos ahora, obtenemos este
+
+19
+00:01:39,750 --> 00:01:43,160
+error en la parte inferior despus de una corta duracin.
+
+20
+00:01:43,230 --> 00:01:45,980
+As que ahora voy a reformular esto.
+
+21
+00:01:46,260 --> 00:01:51,060
+Y ahora siempre veremos esa ruleta, pero llegaremos a la cafetera.
+
+22
+00:01:51,060 --> 00:01:56,370
+Ahora vamos a eliminar a spinner, as que vamos a llegar a ustedes, carguen el servicio.
+
+23
+00:01:56,640 --> 00:02:03,290
+Los Estados de carga cambiaron y llamamos a la prxima falsa porque realmente el ao tambin quiero quitar la astilla.
+
+24
+00:02:03,570 --> 00:02:08,860
+Pero ahora tendremos el problema de que tendremos un men desplegable de seleccin sin un sitio para seleccionar.
+
+25
+00:02:09,060 --> 00:02:16,050
+Ahora podramos hacer eso, pero tal vez, en su lugar, queremos mostrar un botn que nos permita activar
+
+26
+00:02:16,110 --> 00:02:18,820
+el mtodo de ejercicio disponible de nuevo.
+
+27
+00:02:18,930 --> 00:02:21,520
+Ahora, cmo podramos implementar esto?
+
+28
+00:02:21,540 --> 00:02:29,010
+Ahora lo bueno es que conseguimos que este ejercicio haya cambiado el emisor de eventos que
+
+29
+00:02:29,010 --> 00:02:39,750
+estamos utilizando cuando conseguimos ejercicios con xito. Tambin pude emitir eventos cuando fallamos y simplemente emitir nulos aqu, as que no habr ejercicios.
+
+30
+00:02:39,750 --> 00:02:44,630
+Ahora podemos ir a un nuevo entrenamiento donde nos suscribamos para engaar y dmetro aqu.
+
+31
+00:02:45,370 --> 00:02:52,080
+Y lo que sucede aqu ahora es que si fracasamos an recibimos un evento, pero los ejercicios que obtengamos sern nulos.
+
+32
+00:02:52,090 --> 00:02:58,950
+Entonces este ejercicio ser nulo y eso me permite manejar esto en mi componente en el componente.
+
+33
+00:02:59,140 --> 00:03:05,480
+Ahora podemos mostrar un botn que nos permite buscar de nuevo cada vez que los ejercicios son nulos.
+
+34
+00:03:05,590 --> 00:03:12,670
+As que aqu tenemos nuestro campo de formulario matemtico con el men desplegable y tenemos ese marcador y solo
+
+35
+00:03:12,670 --> 00:03:15,670
+quiero mostrarlo si estamos cargando o no cargando.
+
+36
+00:03:15,730 --> 00:03:21,820
+Y si obtenemos ejercicios nulos, aqu quiero mostrar eso para el campo.
+
+37
+00:03:21,910 --> 00:03:28,500
+Si no estamos cargando y si hay ejercicios, tambin podramos agregar una condicin al girador.
+
+38
+00:03:28,540 --> 00:03:31,880
+Pero aqu estoy realmente bien con mostrar esto cuando estamos cargando.
+
+39
+00:03:32,080 --> 00:03:38,830
+Sin embargo, lo que cambiara es que agregar un segundo botn y el rea de accin, el primer botn, se
+
+40
+00:03:38,830 --> 00:03:40,220
+muestra en este momento.
+
+41
+00:03:40,240 --> 00:03:46,910
+Ahora mismo, ocultamos este bloque completo mientras cargamos y eso siempre est bien.
+
+42
+00:03:47,140 --> 00:03:51,410
+Pero luego de que termine solo quiero mostrar el botn de inicio aqu.
+
+43
+00:03:51,730 --> 00:03:53,270
+Si tenemos ejercicios.
+
+44
+00:03:53,290 --> 00:03:55,530
+Entonces, si el ejercicio es as de cierto.
+
+45
+00:03:56,170 --> 00:04:04,300
+De lo contrario, si no tenemos ejercicios, que es mi condicin para el segundo botn, quiero mostrar este segundo botn
+
+46
+00:04:04,300 --> 00:04:11,390
+donde digo buscar de nuevo y esto realmente no ser un botn de enviar, sino un botn normal.
+
+47
+00:04:11,430 --> 00:04:19,720
+As que escriba el botn y no quiero deshabilitarlo, siempre estar habilitado, pero al hacer clic en Lisner, quiero volver
+
+48
+00:04:19,720 --> 00:04:22,000
+a activar este mtodo de bsqueda.
+
+49
+00:04:22,120 --> 00:04:28,840
+Y si echamos un vistazo al nuevo componente de capacitacin, buscamos nuestros ejercicios de etiqueta
+
+50
+00:04:28,840 --> 00:04:30,630
+desde dentro de Engy.
+
+51
+00:04:30,640 --> 00:04:40,020
+Ahora crear un nuevo mtodo que simplemente llamar ejercicios de bsqueda y mover ese cdigo en donde comenzamos a
+
+52
+00:04:40,040 --> 00:04:47,040
+buscarlos en Meffert y en su lugar llamaremos a ese mtodo desde adentro y
+
+53
+00:04:47,060 --> 00:04:48,120
+desde all.
+
+54
+00:04:48,210 --> 00:04:54,560
+Ahora obtenemos este mtodo adicional ahora, los ejercicios fecche podemos ejecutar este mtodo cada vez que hagamos clic en este
+
+55
+00:04:54,560 --> 00:04:56,400
+botn, este botn buscar de nuevo.
+
+56
+00:04:56,720 --> 00:05:02,090
+Entonces, deberamos ejecutar este ejercicio de bsqueda este mtodo en este caso.
+
+57
+00:05:02,100 --> 00:05:10,230
+Ahora con esa configuracin podemos volver a nuestra aplicacin y asegurarnos de que obtenemos un error
+
+58
+00:05:10,230 --> 00:05:20,430
+volviendo al servicio de entrenamiento y nuevamente comentando esto temporalmente y lanzando un nuevo error en la funcin de
+
+59
+00:05:20,430 --> 00:05:24,620
+mapa de la bsqueda disponible ejerctese este mtodo.
+
+60
+00:05:24,610 --> 00:05:25,840
+Y ahora vamos a echar un vistazo.
+
+61
+00:05:25,860 --> 00:05:32,520
+LOTES vemos un spinner y vemos el mensaje de error en la parte inferior y buscamos de nuevo el botn.
+
+62
+00:05:32,580 --> 00:05:36,840
+Y si hago clic mientras comenzamos a buscar de nuevo, pero por supuesto siempre fallamos.
+
+63
+00:05:36,910 --> 00:05:44,040
+Ahora, por otro lado, si modifico esto en un comentario, la vuelta normal muere en ese momento, tambin veremos una
+
+64
+00:05:44,040 --> 00:05:49,340
+ruleta, pero la buscaremos con xito y no veremos ese botn de volver a buscar.
+
+65
+00:05:49,500 --> 00:05:57,510
+En cambio, podemos comenzar nuestro ejercicio ahora y esto es un manejo de errores mejorado que creo que
+
+66
+00:05:57,510 --> 00:05:59,110
+mejora esta aplicacin.
+
+67
+00:05:59,130 --> 00:06:05,080
+Nos permite proporcionar una mejor experiencia de usuario para manejar los errores y decirle al usuario lo que est sucediendo.
+

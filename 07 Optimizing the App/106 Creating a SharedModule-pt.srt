@@ -1,0 +1,220 @@
+1
+00:00:02,150 --> 00:00:08,440
+Ento fizemos muito com todos esses mdulos e agora o aplicativo Marchal  realmente muito enxuto.
+
+2
+00:00:08,480 --> 00:00:14,660
+Tambm poderamos criar um mdulo principal para colocar todos os recursos do mdulo do aplicativo, mas
+
+3
+00:00:14,660 --> 00:00:16,440
+deixarei no mdulo do aplicativo.
+
+4
+00:00:16,730 --> 00:00:22,250
+O que eu queria fazer  criar um mdulo compartilhado, porque se dermos uma olhada no mdulo
+
+5
+00:00:22,670 --> 00:00:28,850
+de treinamento, veremos que importamos o mdulo comum Marchal e formulrios l, bem como material e layout flex.
+
+6
+00:00:28,850 --> 00:00:32,520
+E ns importamos as mesmas coisas no nosso mdulo off.
+
+7
+00:00:32,660 --> 00:00:36,560
+Portanto, um marechal compartilhado para essas coisas certamente faz sentido.
+
+8
+00:00:36,570 --> 00:00:47,240
+Ento, em uma pasta compartilhada, todos criam um arquivo TS do mdulo Dud compartilhado e eu nomeio o mdulo compartilhado decorado com
+
+9
+00:00:47,240 --> 00:00:53,820
+o mdulo Ngee, claro, e importo o mdulo Engy de um ngulo ou Clor.
+
+10
+00:00:53,840 --> 00:01:00,670
+Ento, vamos adicionar este mdulo ngi de importao no ncleo angular como este.
+
+11
+00:01:01,250 --> 00:01:07,560
+E agora, de fato, mdulo compartilhado aqui, que  apenas um mdulo normal que usaremos para compartilhar.
+
+12
+00:01:07,990 --> 00:01:13,430
+Tudo o que eu poderia definir declaraes claras de componentes que compartilhamos em Martial, mas
+
+13
+00:01:13,430 --> 00:01:21,080
+ns temos esses componentes, mas eu posso importar algumas coisas e export-los novamente para que eu possa us-los em outros mdulos
+
+14
+00:01:21,350 --> 00:01:27,260
+porque como eu disse por padro um mdulo mantm suas importaes e declaraes para si prprio.
+
+15
+00:01:27,440 --> 00:01:34,400
+Mas se voc adicionar exportaes que ele realmente compartilha com qualquer mdulo do Alber que importe este mdulo, o mesmo
+
+16
+00:01:34,400 --> 00:01:40,070
+padro que j usamos em um mdulo de material  simplesmente importar e exportar um monte
+
+17
+00:01:40,070 --> 00:01:40,690
+de coisas.
+
+18
+00:01:40,760 --> 00:01:43,860
+Ento isso essencialmente j  um mdulo compartilhado.
+
+19
+00:01:43,880 --> 00:01:50,090
+Agora vamos dar um passo alm e criar um adicional para mais do que apenas componentes de material.
+
+20
+00:01:50,090 --> 00:01:53,570
+Ento, no mdulo compartilhado aqui, o que compartilhamos.
+
+21
+00:01:53,780 --> 00:02:00,500
+Bem, como acabamos de identificar o mdulo comum no material do mdulo de formulrios e o layout flexvel, o
+
+22
+00:02:00,500 --> 00:02:03,480
+mdulo de formulrios  usado apenas no mdulo off.
+
+23
+00:02:03,530 --> 00:02:09,470
+Ento, vou deixar aqui, mas vou cortar o comentrio no mdulo do formulrio e adicion-los ao array de
+
+24
+00:02:09,490 --> 00:02:16,550
+importaes do meu mdulo compartilhado, bem como  matriz de exportaes de rvores, para que possamos us-los em nossos mdulos tambm.
+
+25
+00:02:17,150 --> 00:02:23,720
+E o mesmo para material e flex layout de ngulo de tiro vai ficar fora Marchal porque isso,
+
+26
+00:02:23,720 --> 00:02:25,680
+claro,  usado apenas aqui.
+
+27
+00:02:25,820 --> 00:02:33,890
+Ento, vamos mover essas duas coisas que acabamos de selecionar no mdulo compartilhado, tanto importaes quanto exportaes.
+
+28
+00:02:33,890 --> 00:02:38,720
+Agora, obviamente, precisamos adicionar o Puff de importao para importar instrues para essas coisas.
+
+29
+00:02:38,930 --> 00:02:44,270
+Ento, na margem off, que seria o mdulo flex layout e que seria o mdulo comum.
+
+30
+00:02:44,270 --> 00:02:46,750
+E claro, tambm o mdulo de formulrios.
+
+31
+00:02:46,970 --> 00:02:56,080
+Ento, copie estes arquivos para remover o layout flex e Carmen do mdulo de remoo do mdulo de formulrios da
+
+32
+00:02:56,110 --> 00:03:03,440
+Angola, importe e coloque essas importaes que acabei de copiar no meu mdulo compartilhado, mas no
+
+33
+00:03:03,560 --> 00:03:06,260
+preciso do mdulo de fruns reativos.
+
+34
+00:03:06,470 --> 00:03:13,040
+Agora, qual a importao que est faltando e que  o mdulo de material que tambm removerei do mdulo
+
+35
+00:03:13,070 --> 00:03:16,480
+e que agora tambm ser adicionado ao meu mdulo compartilhado.
+
+36
+00:03:16,580 --> 00:03:22,360
+A recompensa  a mesma de antes, j que o nvel da pasta antiga  o mesmo.
+
+37
+00:03:22,610 --> 00:03:30,260
+Ento, agora eu recebo meu mdulo compartilhado de compartilhamento preparado e posso importar esse mdulo compartilhado para o meu
+
+38
+00:03:30,620 --> 00:03:32,200
+mdulo off e import-lo.
+
+39
+00:03:32,330 --> 00:03:37,970
+Vou adicionar meu mdulo compartilhado e, claro, voc tambm precisa adicionar uma instruo de importao no topo, onde voc aponta
+
+40
+00:03:37,970 --> 00:03:41,730
+para a pasta compartilhada e eles esto para o arquivo de mdulo compartilhado.
+
+41
+00:03:41,870 --> 00:03:46,360
+E ns no precisamos de exportaes so realmente fora do mdulo porque no estamos exportando nada.
+
+42
+00:03:46,370 --> 00:03:48,790
+Ento esse  o mdulo compartilhado.
+
+43
+00:03:48,830 --> 00:03:54,030
+Agora tambm temos nosso mdulo de treinamento.
+
+44
+00:03:54,290 --> 00:04:00,560
+Tambm podemos nos livrar do mdulo comum e do forms do material e do mdulo de layout
+
+45
+00:04:00,560 --> 00:04:03,120
+flex e simplesmente adicionar o mdulo compartilhado.
+
+46
+00:04:03,410 --> 00:04:10,070
+E assim como no mdulo, voc precisa adicionar uma declarao de importao para este ano para importar o
+
+47
+00:04:10,100 --> 00:04:14,430
+mdulo compartilhado da pasta compartilhada e do arquivo do mdulo compartilhado.
+
+48
+00:04:14,490 --> 00:04:17,020
+Ento, com isso, estamos usando um mdulo compartilhado.
+
+49
+00:04:17,100 --> 00:04:25,340
+Vamos dar uma olhada mais de perto no aplicativo e ver se tudo ainda funciona se recarregarmos a pgina se
+
+50
+00:04:25,340 --> 00:04:26,580
+fizermos login agora.
+
+51
+00:04:26,630 --> 00:04:28,140
+Isso parece bom.
+
+52
+00:04:28,340 --> 00:04:29,920
+Isso tambm parece bom.
+
+53
+00:04:30,050 --> 00:04:32,690
+Vamos comear alguns lunges laterais aqui.
+
+54
+00:04:32,690 --> 00:04:36,040
+Ento, isso agora funciona muito bem.
+
+55
+00:04:36,290 --> 00:04:38,500
+Ento agora estamos usando um mdulo compartilhado.
+

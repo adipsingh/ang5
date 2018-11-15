@@ -1,0 +1,160 @@
+1
+00:00:02,360 --> 00:00:04,980
+En la ltima conferencia, agregamos un mdulo compartido.
+
+2
+00:00:05,000 --> 00:00:09,790
+Acabemos ahora con todo este mdulo dividiendo nuestras rutas.
+
+3
+00:00:09,800 --> 00:00:15,800
+En este momento tenemos este mdulo de enrutamiento de la aplicacin y luego obtenemos el componente de bienvenida, as como las rutas fuera de
+
+4
+00:00:15,970 --> 00:00:17,310
+servicio y la ruta comercial.
+
+5
+00:00:17,630 --> 00:00:23,630
+Ahora, si lo piensas, la ruta comercial no tiene mucho sentido aqu porque la ruta de
+
+6
+00:00:23,810 --> 00:00:30,620
+entrenamiento debe pertenecer al mdulo de entrenamiento y las rutas de apagado deben pertenecer al mdulo de apagado.
+
+7
+00:00:30,650 --> 00:00:34,020
+Entonces esto es algo que tambin quiero hacer ahora.
+
+8
+00:00:34,280 --> 00:00:42,970
+Quiero poner estas rutas en sus mdulos para todo el mdulo. Simplemente las cortar.
+
+9
+00:00:42,980 --> 00:00:49,070
+Ve a mi carpeta y agrega todo el mdulo de enrutamiento de la cada de Katia.
+
+10
+00:00:49,070 --> 00:00:54,620
+Se considera una buena prctica colocar siempre las rutas en un mdulo separado, denominado mdulo de
+
+11
+00:00:54,620 --> 00:00:59,420
+enrutamiento del archivo y se convertir en un archivo de enrutamiento cargado con entusiasmo.
+
+12
+00:00:59,420 --> 00:01:10,900
+As que aqu estoy el mdulo Engy que, por supuesto, como saben, tenemos que importar desde un ncleo singular y en ese mdulo Engy
+
+13
+00:01:10,900 --> 00:01:17,490
+quiero configurar mis rutas, as que agregar mis rutas constantes, que son de tipo
+
+14
+00:01:17,490 --> 00:01:19,160
+rutas importadas de .
+
+15
+00:01:19,260 --> 00:01:25,950
+Un enrutador angular como este, que es un conjunto de rutas y yo solo cort las rutas, as que agrgalo aqu.
+
+16
+00:01:25,980 --> 00:01:29,150
+Estos dos objetos se registran y registran el componente.
+
+17
+00:01:29,160 --> 00:01:30,670
+Necesitamos importarlos aqu.
+
+18
+00:01:30,900 --> 00:01:44,940
+Por lo tanto, agregaremos las importaciones para registrar el componente desde la carpeta de inicio de sesin y una importacin para iniciar sesin en el componente
+
+19
+00:01:45,060 --> 00:01:49,650
+desde la carpeta de inicio de sesin, por supuesto.
+
+20
+00:01:49,650 --> 00:01:56,100
+Ahora tenemos la configuracin del router y ahora podemos ir al mdulo ngi aqu y agregar
+
+21
+00:01:56,100 --> 00:02:02,560
+importaciones e importar el mdulo del enrutador que viene del paquete de ngulo o enrutador tambin.
+
+22
+00:02:02,830 --> 00:02:06,960
+Entonces este mdulo y aqu no llamamos a root.
+
+23
+00:02:06,990 --> 00:02:12,060
+Solo llamamos eso a lo que est en una aplicacin angular y ese no es el mdulo de enrutamiento.
+
+24
+00:02:12,060 --> 00:02:16,090
+En su lugar, pedimos un hijo y esto luego lo fusionar con un enrutador.
+
+25
+00:02:16,140 --> 00:02:23,310
+Detrs de escena aqu pasamos nuestras rutas y luego tenemos que asegurarnos de exportar este mdulo de enrutador.
+
+26
+00:02:23,490 --> 00:02:27,050
+Y ahora podemos importarlo a Off Marchal.
+
+27
+00:02:27,240 --> 00:02:34,410
+Entonces, la aplicacin, no la aplicacin para usted, del mdulo de enrutamiento ahora se importa aqu, se agrega a la matriz
+
+28
+00:02:34,470 --> 00:02:41,620
+de importaciones y la declaracin de importaciones tambin se agrega apuntando al archivo del mdulo de enrutamiento fuera de este.
+
+29
+00:02:41,630 --> 00:02:44,180
+Estas rutas an deberan estar disponibles globalmente.
+
+30
+00:02:44,180 --> 00:02:50,330
+Entonces, en nuestra aplicacin, aunque ya no tenemos estas rutas ni el mdulo de enrutamiento de la aplicacin, tambin
+
+31
+00:02:50,330 --> 00:02:55,100
+podemos eliminar las importaciones del componente de registro y el componente de inicio de sesin.
+
+32
+00:02:55,100 --> 00:02:58,190
+Ahora compilemos eso y veamos si esto funciona.
+
+33
+00:02:58,430 --> 00:03:05,570
+Si la aplicacin se carga y cierro sesin, podemos cambiar entre Registrarse e iniciar sesin aunque lo hayamos incluido
+
+34
+00:03:05,690 --> 00:03:07,550
+en un archivo por separado.
+
+35
+00:03:07,550 --> 00:03:10,760
+Ahora vale la pena mencionar que esto est cargado con entusiasmo.
+
+36
+00:03:10,790 --> 00:03:12,700
+Entonces, no estamos usando cargas perezosas aqu.
+
+37
+00:03:12,770 --> 00:03:17,550
+Usamos para que el nio agregue estas rutas a las rutas globales configuradas.
+
+38
+00:03:17,720 --> 00:03:22,880
+Pero estamos haciendo esto bien desde el inicio de la aplicacin debido a que la educacin debe
+
+39
+00:03:22,880 --> 00:03:24,300
+estar disponible desde el principio.
+
+40
+00:03:24,500 --> 00:03:31,750
+Ahora tambin podemos seguir y echar un vistazo al componente de capacitacin y ver qu podemos hacer con eso.
+

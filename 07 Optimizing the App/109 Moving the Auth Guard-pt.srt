@@ -1,0 +1,136 @@
+1
+00:00:02,230 --> 00:00:06,750
+Com o carregamento lento, quero ir ao meu mdulo de roteamento de treinamento.
+
+2
+00:00:06,850 --> 00:00:13,750
+Ento atrasos no mdulo de roteamento carregado e remover a guarda de fora daqui, porque se us-lo
+
+3
+00:00:13,750 --> 00:00:17,550
+aqui, temos uma desvantagem se usarmos realmente podemos esperar aqui.
+
+4
+00:00:17,740 --> 00:00:25,180
+Verificamos se temos permisso para inserir este componente no componente de treinamento depois que carregamos
+
+5
+00:00:25,180 --> 00:00:26,860
+o mdulo inteiro.
+
+6
+00:00:26,950 --> 00:00:30,870
+Agora podemos simplesmente salvar isso e no baixar o mdulo.
+
+7
+00:00:30,940 --> 00:00:37,540
+Se no tivermos acesso de qualquer maneira,  por isso que verificar isso aqui  muito tarde para ter um aplicativo ideal,
+
+8
+00:00:37,540 --> 00:00:38,270
+pelo menos.
+
+9
+00:00:38,500 --> 00:00:39,950
+Ento eu removerei a surpresa.
+
+10
+00:00:39,950 --> 00:00:46,800
+Importante pode ativar a chave aqui no mdulo de roteamento de deteco e ir para o mdulo de roteamento de aplicativo.
+
+11
+00:00:46,960 --> 00:00:54,570
+E aqui nesta rota nesta rota de carga lenta h uma propriedade especial pode carregar o que podemos adicionar.
+
+12
+00:00:54,610 --> 00:00:59,950
+Funciona como pode ativar, mas  executado antes do pacote ser carregado.
+
+13
+00:01:00,190 --> 00:01:08,950
+Ento, aqui estou desprevenida e para que isso funcione eu preciso ir para o
+
+14
+00:01:08,950 --> 00:01:15,240
+meu arquivo desprotegido agora e implementar a interface de carregamento.
+
+15
+00:01:15,500 --> 00:01:19,600
+ importado de roteadores angulares ET, ento deixe-me adicionar.
+
+16
+00:01:19,610 --> 00:01:20,990
+Pode carregar aqui.
+
+17
+00:01:21,280 --> 00:01:26,810
+Agora eu tenho que adicionar pode carregar aqui e pode carregar parece quase como maneira conectada para que eu possa copiar todo
+
+18
+00:01:26,810 --> 00:01:27,430
+esse cdigo.
+
+19
+00:01:27,570 --> 00:01:28,330
+As diferenas.
+
+20
+00:01:28,340 --> 00:01:32,050
+No tem esse segundo argumento apenas o primeiro.
+
+21
+00:01:32,150 --> 00:01:38,500
+Ns salvamos isso, recebemos um erro porque o primeiro tem um tipo diferente do tipo route
+
+22
+00:01:38,500 --> 00:01:40,620
+que devemos importar do roteador.
+
+23
+00:01:40,660 --> 00:01:43,970
+Ento, apenas a rota como essa
+
+24
+00:01:44,020 --> 00:01:49,530
+Agora, com isso, compila com sucesso e agora temos as mesmas verificaes.
+
+25
+00:01:49,530 --> 00:01:54,770
+Ns temos a mesma checagem e os dois mtodos que no estamos usando podem ser ativados ou podemos remover isso.
+
+26
+00:01:54,780 --> 00:01:56,920
+Mas vou deixar aqui por completo.
+
+27
+00:01:57,060 --> 00:02:03,090
+Mas agora ns podemos carregar e ns adicionamos isso na bandeja, desculpe-me no mdulo de roteamento de aplicativos.
+
+28
+00:02:03,090 --> 00:02:11,160
+Ento, agora estamos verificando se temos permisso para acessar essa rota ainda antes de sairmos antes de
+
+29
+00:02:11,160 --> 00:02:11,740
+entrarmos.
+
+30
+00:02:11,790 --> 00:02:13,880
+Mas tambm antes de carregarmos o pacote.
+
+31
+00:02:14,160 --> 00:02:21,120
+Ento, se eu sair eu ainda no consigo acessar o treinamento de barra como posso provar a voc se eu tentar fazer isso manualmente
+
+32
+00:02:21,810 --> 00:02:26,040
+eu ainda sou redirecionador para fazer o login e ele ainda funciona ao contrrio.
+
+33
+00:02:26,040 --> 00:02:32,810
+Se eu fizer o login, mas nos bastidores agora s vai preguioso carregar o pacote do pacote de treinamento.
+
+34
+00:02:32,880 --> 00:02:35,220
+Se ns realmente tivermos permisso para entrar nisso.
+

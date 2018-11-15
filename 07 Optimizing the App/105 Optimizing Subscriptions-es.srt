@@ -1,0 +1,164 @@
+1
+00:00:02,260 --> 00:00:08,350
+Entonces, ahora que tambin creamos el mdulo de capacitacin, hay dos cosas que reconozco que podemos optimizar para
+
+2
+00:00:08,350 --> 00:00:08,760
+una.
+
+3
+00:00:08,770 --> 00:00:15,220
+Deberamos poner el fuego angular del generador de incendios Gengler de los mdulos que quiero decir en el mdulo de apagado y no en
+
+4
+00:00:15,220 --> 00:00:17,220
+el mdulo de la aplicacin, lo olvid.
+
+5
+00:00:17,230 --> 00:00:22,980
+Entonces, agreguemos el mdulo de ngulo de disparo en la matriz de importaciones del mdulo de apagado.
+
+6
+00:00:23,140 --> 00:00:25,400
+Y esto significa que necesitamos agregar una importacin tambin.
+
+7
+00:00:25,420 --> 00:00:32,430
+Entonces, debemos importar el fuego angular del mdulo desde el ngulo de disparo para reducirlo.
+
+8
+00:00:32,440 --> 00:00:39,820
+Esto ahora nos permite volver al mdulo de la aplicacin y cerrar la brecha y tambin eliminar la importacin de ngulo de fuego
+
+9
+00:00:39,820 --> 00:00:45,550
+fuera del ngulo del jefe de bomberos debe permanecer en el comandante areo porque Dad es el mdulo
+
+10
+00:00:45,550 --> 00:00:50,350
+que se utiliza para inicializar LA fuego y queremos hacer eso bien desde el principio.
+
+11
+00:00:50,350 --> 00:00:51,900
+Mdulo de India.
+
+12
+00:00:52,240 --> 00:01:01,480
+Y otra mejora que reconoc es que puede obtener un error o, de nuestras suscripciones, cancelar la suscripcin si
+
+13
+00:01:02,110 --> 00:01:04,730
+no las tiene por alguna razn.
+
+14
+00:01:04,750 --> 00:01:10,790
+Si se llama a Engy on the stroy por alguna razn antes de que se cree la suscripcin, por
+
+15
+00:01:11,020 --> 00:01:16,700
+lo tanto, deberamos verificar dnde decimos que si existe ceps de carga, entonces deseo cancelar la suscripcin.
+
+16
+00:01:16,900 --> 00:01:22,310
+Y deberamos hacer esto para todas las suscripciones que puedan ser seguras y estn protegidas contra este error.
+
+17
+00:01:22,510 --> 00:01:30,340
+Entonces, el componente de inicio de sesin tambin verificar si la carga de los subs es verdadera o no est fallas al
+
+18
+00:01:30,340 --> 00:01:33,800
+menos no est indefinida, en cuyo caso cancelar la suscripcin.
+
+19
+00:01:33,970 --> 00:01:35,790
+Entonces eso es cargar e inscribirse.
+
+20
+00:01:35,800 --> 00:01:38,960
+Tambin deberamos hacer lo mismo en todos los componentes de Avro.
+
+21
+00:01:39,130 --> 00:01:40,590
+As que fomenta el entrenamiento.
+
+22
+00:01:40,600 --> 00:01:41,420
+No es relevante.
+
+23
+00:01:41,440 --> 00:01:45,790
+No tenemos motor destruir all no tenemos una suscripcin all y dejar de entrenar.
+
+24
+00:01:45,790 --> 00:01:52,630
+Tampoco tenemos eso en una nueva capacitacin, aunque lo hacemos aqu, en ONG sin destruir, obtenemos dos suscripciones.
+
+25
+00:01:52,660 --> 00:02:00,070
+Tenemos que verificar cada uno de estos para verificar si el ejercicio es una suscripcin y solo si eso no
+
+26
+00:02:00,100 --> 00:02:02,500
+est indefinido solo entonces cancelamos la suscripcin.
+
+27
+00:02:02,740 --> 00:02:06,100
+Y lo mismo es cierto para la suscripcin de carga por supuesto.
+
+28
+00:02:06,250 --> 00:02:15,520
+Entonces, solo si no se trata de los datos de bsqueda solo quiero cancelar la suscripcin y entrenamientos pasados, tambin tenemos
+
+29
+00:02:15,520 --> 00:02:16,460
+una suscripcin.
+
+30
+00:02:16,600 --> 00:02:24,400
+As que aqu tambin debera verificar si esta suscripcin a Xchange si esta suscripcin existe solo
+
+31
+00:02:24,400 --> 00:02:27,580
+si existe solo entonces cancelaremos la suscripcin.
+
+32
+00:02:27,850 --> 00:02:34,690
+Ahora en el componente de capacitacin aqu s tenemos una suscripcin y ni siquiera cancelamos la suscripcin.
+
+33
+00:02:34,700 --> 00:02:37,320
+Entonces eso es algo que definitivamente tenemos que arreglar.
+
+34
+00:02:37,390 --> 00:02:45,750
+Agregue el stroy aqu porque si lo olvida corre el riesgo de tener prdidas de memoria.
+
+35
+00:02:45,980 --> 00:02:52,560
+As que agreguemos este ao y en huelga y veamos si existe esta suscripcin de
+
+36
+00:02:52,740 --> 00:02:57,440
+ejercicio y si no existe, la usar y cancelar la suscripcin.
+
+37
+00:02:57,440 --> 00:03:03,690
+Lo bueno es que verificamos eso y un componente de bienvenida all no recibimos ninguna suscripcin en el componente de la aplicacin.
+
+38
+00:03:03,840 --> 00:03:09,690
+Ah tenemos este Lisner que inicializamos, pero en su lugar se maneja en un servicio.
+
+39
+00:03:09,930 --> 00:03:18,150
+Entonces con eso ahora mejoramos todas nuestras suscripciones y arreglamos el posicionamiento del fuego
+
+40
+00:03:18,240 --> 00:03:19,810
+angular del mdulo.
+
+41
+00:03:19,830 --> 00:03:24,120
+Ahora, antes de agregar carga diferida, podemos hacer ms con respecto a los mdulos.
+

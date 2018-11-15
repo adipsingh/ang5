@@ -1,0 +1,340 @@
+1
+00:00:02,360 --> 00:00:06,770
+Hasta aqu en el mdulo aplicamos mltiples mejoras pticas.
+
+2
+00:00:06,830 --> 00:00:11,220
+Ahora podemos trabajar en el lado tcnico y el lado tcnico.
+
+3
+00:00:11,270 --> 00:00:14,400
+Me refiero principalmente a dividir el mdulo de la aplicacin.
+
+4
+00:00:14,420 --> 00:00:16,370
+Est bien que podamos dejarlo as.
+
+5
+00:00:16,370 --> 00:00:22,900
+No tenemos una aplicacin sper grande, pero ya tenemos muchas importaciones y declaraciones en el mdulo de la aplicacin.
+
+6
+00:00:22,910 --> 00:00:29,360
+Por lo tanto, tendra sentido dividir nuestra aplicacin en mdulos de caractersticas y tal vez tambin agregar un mdulo principal.
+
+7
+00:00:29,360 --> 00:00:31,720
+Ahora veamos qu tiene sentido.
+
+8
+00:00:32,320 --> 00:00:39,020
+Sin duda, podemos agregar mdulos de funciones. Podemos agregar un mdulo de caractersticas para una funcin de capacitacin
+
+9
+00:00:39,030 --> 00:00:40,630
+y una para usted.
+
+10
+00:00:40,690 --> 00:00:46,120
+Entonces, estos dos mdulos ciertamente tienen sentido y nos permiten mover los componentes que pertenecen a una
+
+11
+00:00:46,120 --> 00:00:50,920
+determinada caracterstica en ese mdulo y, por lo tanto, limpiar el mdulo de la aplicacin.
+
+12
+00:00:51,100 --> 00:00:52,240
+As que comencemos con eso.
+
+13
+00:00:52,270 --> 00:00:58,160
+Comencemos con un mdulo de caractersticas 40 de parte al lado de los servidores de apagado y fuera de guardia.
+
+14
+00:00:58,270 --> 00:01:04,820
+Agregar un mdulo ms reciente que s. Simplemente exportar una clase aqu del mdulo.
+
+15
+00:01:05,020 --> 00:01:10,270
+Y esto se convirti en un mdulo al agregar el decorador de mdulos Ngee.
+
+16
+00:01:10,270 --> 00:01:16,390
+Ahora es necesario importar el decorador de mdulos Ngee y se importa desde el ncleo angular.
+
+17
+00:01:16,540 --> 00:01:24,850
+As que asegrese de agregar esta importacin en la parte superior de su mdulo de importacin de archivos desde el ncleo angular.
+
+18
+00:01:25,180 --> 00:01:33,280
+Con eso aadido Debemos agregar algunas mientras que las configuraciones son un objeto que pasamos al mdulo Engy al
+
+19
+00:01:33,280 --> 00:01:34,250
+mdulo Engy.
+
+20
+00:01:34,600 --> 00:01:38,110
+Y aqu tenemos que agregar algunas declaraciones.
+
+21
+00:01:38,110 --> 00:01:46,240
+Entonces, los componentes que usamos en este mdulo podran necesitar agregar algunas importaciones y podramos necesitar agregar
+
+22
+00:01:46,300 --> 00:01:47,520
+algunas exportaciones.
+
+23
+00:01:47,520 --> 00:01:49,030
+Ahora veamos qu necesitamos.
+
+24
+00:01:49,300 --> 00:01:55,930
+No agregamos proveedores aqu porque en realidad deberamos ofrecer siempre sus servicios en el mdulo de
+
+25
+00:01:55,930 --> 00:01:57,760
+la aplicacin si planea usarlos.
+
+26
+00:01:57,760 --> 00:02:03,070
+Aplicacin amplia o, en general, si planea usarlos como singleton.
+
+27
+00:02:03,080 --> 00:02:07,930
+Una vez que pueda obtener ms informacin acerca de esto en mi curso completo de gua, donde profundizar en los mdulos de
+
+28
+00:02:07,930 --> 00:02:12,300
+una manera mucho ms profunda a medida que profundice en todos los temas angulares de manera mucho ms profunda.
+
+29
+00:02:12,400 --> 00:02:16,290
+Entonces, qu declaraciones deberamos agregar al mdulo ahora?
+
+30
+00:02:16,360 --> 00:02:18,180
+Echamos un vistazo al mdulo de mapas.
+
+31
+00:02:18,280 --> 00:02:23,560
+Sin duda tenemos que registrar el componente y el componente de inicio de sesin que no pertenece a
+
+32
+00:02:23,590 --> 00:02:26,240
+toda la aplicacin, sino al mdulo de la funcin.
+
+33
+00:02:26,320 --> 00:02:31,660
+As que tmalos de las declaraciones en el mdulo de la aplicacin y eliminar las importaciones.
+
+34
+00:02:32,020 --> 00:02:36,510
+Y en su lugar voy al mdulo de apagado y les agrego dos declaraciones aqu.
+
+35
+00:02:36,880 --> 00:02:39,090
+Esto significa que todos tenemos que agregar las importaciones aqu.
+
+36
+00:02:39,160 --> 00:02:47,520
+Por lo tanto, en la importacin para registrar el componente desde la carpeta de inicio de sesin, registre el archivo del componente all y
+
+37
+00:02:47,520 --> 00:02:56,310
+el mismo para el componente de inicio de sesin que se extrae de la carpeta de inicio de sesin y all desde el archivo de
+
+38
+00:02:56,310 --> 00:02:57,810
+componente de inicio de sesin.
+
+39
+00:02:57,810 --> 00:03:02,480
+Entonces esas son mis declaraciones que son relevantes para el mdulo off.
+
+40
+00:03:02,490 --> 00:03:05,360
+Ahora, qu hay de las importaciones y exportaciones?
+
+41
+00:03:05,700 --> 00:03:12,350
+Bueno, en el mdulo de aplicacin tenemos claramente nuestro mdulo de material angular que importamos.
+
+42
+00:03:12,450 --> 00:03:18,300
+Este tambin tenemos enrutamiento y diseo flexible y el mdulo de formularios, etc.
+
+43
+00:03:18,300 --> 00:03:24,720
+Ahora, lo importante a tener en cuenta es que solo por importar algo en
+
+44
+00:03:25,290 --> 00:03:32,640
+el aeropuerto, todo esto no lo hace disponible en ms mdulos, incluso si estos mdulos son
+
+45
+00:03:32,680 --> 00:03:40,830
+como mdulos secundarios para Marchal, porque se podra pensar que ya que creamos esto mdulo que simplemente import
+
+46
+00:03:41,100 --> 00:03:43,180
+para importar mdulos desde.
+
+47
+00:03:43,180 --> 00:03:50,370
+Y ahora vamos a la seccin de apagado y all importamos el archivo de Marchal y luego agregamos todos los mdulos al
+
+48
+00:03:50,430 --> 00:03:53,950
+conjunto de importaciones de su mdulo de aplicacin de esta manera.
+
+49
+00:03:54,390 --> 00:04:03,690
+Si haces esto, se compila correctamente, pero tu aplicacin ahora se romper con un montn de mensajes de error.
+
+50
+00:04:03,710 --> 00:04:05,570
+Echamos un vistazo a estos mensajes de error.
+
+51
+00:04:06,630 --> 00:04:13,170
+Bsicamente recibimos mensajes como que la forma Engy es desconocida, pero tambin se desconocen algunos componentes materiales.
+
+52
+00:04:13,200 --> 00:04:15,310
+La razn de esto es lo que acabo de decir.
+
+53
+00:04:15,570 --> 00:04:22,890
+Las cosas que importa en su aplicacin Marchal no se transfieren al mdulo apagado, no se
+
+54
+00:04:22,890 --> 00:04:24,090
+intercambian entre mdulos.
+
+55
+00:04:24,150 --> 00:04:26,730
+Cada mdulo funciona de forma independiente.
+
+56
+00:04:27,030 --> 00:04:32,020
+Entonces, lo que necesite en el mdulo de apagado debe agregarse como una importacin all.
+
+57
+00:04:32,070 --> 00:04:39,110
+Lo ms importante es, por ejemplo, el mdulo y un mdulo que nos da acceso a NGF y as sucesivamente.
+
+58
+00:04:39,210 --> 00:04:46,540
+Usted import desde un ngulo o comn ahora en el mdulo de apagado que tenemos que registrar en el componente de inicio de sesin y en
+
+59
+00:04:47,080 --> 00:04:48,850
+el componente de inicio de sesin.
+
+60
+00:04:48,850 --> 00:04:54,150
+Usamos el enfoque de formulario reactivo en el componente de registro de.
+
+61
+00:04:54,250 --> 00:04:57,270
+Usamos el enfoque de formularios basados en plantilla.
+
+62
+00:04:57,280 --> 00:05:08,570
+Ahora, esto significa que tambin necesitaremos agregar el mdulo de formularios y el mdulo de formas reactivas a nuestras importaciones, tanto de
+
+63
+00:05:08,610 --> 00:05:15,450
+los foros de Angola como importados, y tambin usamos componentes de materiales angulares.
+
+64
+00:05:15,590 --> 00:05:18,930
+Es por eso que tambin necesitamos agregar el mdulo de material aqu.
+
+65
+00:05:19,170 --> 00:05:26,560
+As que asegrese de agregar esto en orden en la parte superior y, adems, la entrada y
+
+66
+00:05:26,630 --> 00:05:29,100
+la importacin aqu y ahora regresamos.
+
+67
+00:05:29,320 --> 00:05:32,520
+Esto se ve mejor, pero el estilo est apagado.
+
+68
+00:05:32,560 --> 00:05:40,800
+La razn de esto es que tambin deberamos importar nuestro mdulo de diseo flexible este mdulo de diseo flexible aqu porque utilizamos
+
+69
+00:05:41,470 --> 00:05:45,730
+este posicionamiento de diseo flexible aqu y no obtenemos un error.
+
+70
+00:05:45,850 --> 00:05:49,220
+Pero an as las directivas ahora no sern reconocidas.
+
+71
+00:05:49,270 --> 00:05:58,820
+As que agreguemos el mdulo de disposicin flexible que importa desde el diseo de flex angular si lo hace.
+
+72
+00:05:58,920 --> 00:06:03,500
+Ahora esto se ve mucho mejor si echas un vistazo al registro, registro y componente.
+
+73
+00:06:03,810 --> 00:06:10,170
+Ahora bien, si te preocupa aumentar el tamao de tu Bunuel importando algunos mdulos aqu, en el
+
+74
+00:06:10,170 --> 00:06:13,310
+antipartcula del mdulo apagado, este no es el caso.
+
+75
+00:06:13,470 --> 00:06:16,730
+Angular maneja esto ingeniosamente detrs de escena.
+
+76
+00:06:16,950 --> 00:06:22,290
+Entonces, la clave es que si usas algo en un mdulo que necesitas importar all,
+
+77
+00:06:22,290 --> 00:06:24,920
+las cosas no se intercambian entre mdulos.
+
+78
+00:06:24,960 --> 00:06:31,950
+Ahora estos ajustes tambin significan que podemos deshacernos del mdulo de formas reactivas y el mdulo de formularios del mdulo
+
+79
+00:06:32,040 --> 00:06:39,780
+de la aplicacin porque solo usamos Fordham aqu en nuestro mdulo de apagado y tambin en parte del mdulo de capacitacin una
+
+80
+00:06:40,200 --> 00:06:41,830
+vez que lo creamos.
+
+81
+00:06:41,880 --> 00:06:43,980
+Pero esto se convertir en un mdulo futuro.
+
+82
+00:06:44,010 --> 00:06:47,760
+Entonces no hay ningn componente de Giddyap donde lo necesitemos.
+
+83
+00:06:47,760 --> 00:06:56,010
+Hablando de eso en la prxima conferencia, crearemos nuestro mdulo de capacitacin y tambin reestructuraremos nuestra aplicacin
+
+84
+00:06:56,010 --> 00:06:57,130
+para Daten.
+
+85
+00:06:57,150 --> 00:06:58,750
+As que pasemos a esto.
+
